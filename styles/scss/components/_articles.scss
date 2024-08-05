@@ -1,27 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import "./variables";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-bottom: 0 !important;
-}
-
-// articles
-
 .articles {
-  background-image: url("/assets/articles/bg1.png");
+  background-image: url("/articles/bg1.png");
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -38,10 +16,8 @@ p {
   }
   .articles-content {
     h2 {
+      @include fontstyle(56px, 600, #04dde5);
       text-align: center;
-      color: #04dde5;
-      font-size: 56px;
-      font-weight: 600;
       padding-bottom: 50px;
       position: relative;
       z-index: 100;
@@ -62,29 +38,29 @@ p {
 
       h3 {
         padding: 10px 0;
-        color: $whiteColor;
+        color: $white;
       }
 
       p {
         padding-bottom: 50px;
         padding-right: 55px;
-        color: $whiteColor;
+        color: $white;
       }
 
       a {
-        border: 1px solid $primaryColor;
+        border: 1px solid $primary;
         padding: 10px 40px;
         text-decoration: none;
-        color: $primaryColor;
+        color: $primary;
         border-radius: 25px;
         font-weight: 600;
-        color: $whiteColor;
+        color: $white;
         font-size: 16px;
         box-shadow: 3px 3px 0px 0px #ffb202;
       }
       &::after {
         content: "";
-        background-image: url("/assets/articles/top.png");
+        background-image: url("/articles/top.png");
         position: absolute;
         background-repeat: no-repeat;
         top: 0;
@@ -95,7 +71,7 @@ p {
       }
       &::before {
         content: "";
-        background-image: url("/assets/articles/bottom.png");
+        background-image: url("/articles/bottom.png");
         position: absolute;
         background-repeat: no-repeat;
         bottom: -983px;

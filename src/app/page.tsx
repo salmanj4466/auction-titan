@@ -7,8 +7,8 @@ import Newsletter from "./Components/Home/Newsletter";
 export default function Home() {
   return (
     <main>
-      {/* <Hero /> */}
-      {/* <Newsletter /> */}
+      <Hero />
+      <Newsletter />
       <Articles />
       {/* <LiveTournament /> */}
       {/* <WorldTopRanking /> */}
