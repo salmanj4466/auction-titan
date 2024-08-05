@@ -1,0 +1,13 @@
+.company-brands {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  overflow: hidden;
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 30px;
+    border-right: 2px solid rgba(255, 255, 255, 0.85);
+  }
+}

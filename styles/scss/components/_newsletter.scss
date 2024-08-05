@@ -28,7 +28,7 @@
     }
 
     p {
-      @include fontstyle(400, 16px, $gray);
+      @include fontstyle(400, 16px, gray);
       margin-bottom: 0;
     }
   }
