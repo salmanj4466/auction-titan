@@ -55,17 +55,42 @@ const Footer = () => {
             </Col>
           </Row>
 
-          <Row gutter={20} className="align-items-end">
-            <Col md={8}>
+          <Row gutter={20} className="align-items-end mt-5 px-5">
+            <Col md={9}>
               <Image width={79} height={79} src="/logo.svg" alt="logo" />
             </Col>
-            <Col md={8}>
-              <p>Dirección: Lorem ipsum dolor sit amet. </p>
+            <Col md={7}>
+              <p>
+                <i className="bi bi-geo-alt"></i> Dirección: Lorem ipsum dolor
+                sit amet.{" "}
+              </p>
             </Col>
             <Col md={8}>
-              <ul>
+              <ul className="social-icon">
                 <li>
-                  <Link href="/"></Link>
+                  <Link href="/">
+                    <i className="bi bi-whatsapp"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <i className="bi bi-envelope"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <i className="bi bi-facebook"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <i className="bi bi-tiktok"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <i className="bi bi-instagram"></i>
+                  </Link>
                 </li>
               </ul>
             </Col>
