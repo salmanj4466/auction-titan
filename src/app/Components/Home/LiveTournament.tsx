@@ -8,7 +8,7 @@ const LiveTournament = () => {
           <h2 className="text-center m-auto">
             EV VIVO <span></span>
           </h2>
-          <Row gutter={[24, 16]} className="mt-5">
+          <Row gutter={[24, 16]} className="mt-4">
             <Col span={12}>
               <div className="torneo-de">
                 <h3>torneo de 12 de agosto</h3>

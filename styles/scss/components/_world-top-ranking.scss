@@ -1,5 +1,5 @@
 .top-ranking {
-  margin: 100px 0;
+  margin: 60px 0;
   h2 {
     @include fontstyle(72px, 400, $primary);
     text-align: center;
@@ -11,7 +11,7 @@
     background-color: #201d22;
     padding: 30px 30px;
     border-radius: 30px;
-    margin: 70px 0;
+    margin: 40px 0;
     position: relative;
 
     &::before {

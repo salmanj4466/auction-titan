@@ -8,7 +8,7 @@ const WorldTopRanking = () => {
         <div className="container">
           <h2> Top mundial </h2>
           <div className="ranking-details">
-            <Row gutter={[48, 16]}>
+            <Row gutter={[40, 16]}>
               <Col span={8}>
                 <div className="profile">
                   <div className="serial-no">

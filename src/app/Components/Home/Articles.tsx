@@ -29,7 +29,7 @@ const Articles = () => {
         <div className="container articles-content">
           <h2>Nuestros artículos más leidos</h2>
 
-          <Row gutter={16}>
+          <Row gutter={40}>
             {cardData.map((elm) => (
               <Col span={8}>
                 <div className="article-card">
