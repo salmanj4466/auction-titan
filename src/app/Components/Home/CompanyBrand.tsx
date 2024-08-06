@@ -23,14 +23,14 @@ const CompanyBrands = () => {
   return (
     <>
       <div className="company-brands">
-        {/* <Marquee> */}
-        {logo.map((elm) => (
-          <div className="logos">
-            <img src={elm.img1} alt="" />
-            <img src={elm.img2} alt="" className="mt-5" />
-          </div>
-        ))}
-        {/* </Marquee> */}
+        <Marquee>
+          {logo.map((elm) => (
+            <div className="logos">
+              <img src={elm.img1} alt="" />
+              <img src={elm.img2} alt="" className="mt-5" />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </>
   );

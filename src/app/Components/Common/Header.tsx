@@ -4,7 +4,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link className="navbar-brand" href="#">
             <Image width={79} height={79} src="/logo.svg" alt="logo" />
@@ -23,13 +23,13 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                <a className="nav-link" aria-current="page" href="#">
+                  Blogs
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Link
+                  Rankings
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -40,7 +40,7 @@ const Header = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Events
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -62,9 +62,18 @@ const Header = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
+                <a className="nav-link" aria-disabled="true">
+                  Patrocinadores
                 </a>
+              </li>
+              <li className="nav-item">
+                <button className="hero-btn"> Registro del torneo </button>
+              </li>
+              <li className="nav-item">
+                <button className="hero-btn2"> Reglas de la liga </button>
+              </li>
+              <li className="nav-item">
+                <img src="bars.png" alt="" className="bars" />
               </li>
             </ul>
           </div>

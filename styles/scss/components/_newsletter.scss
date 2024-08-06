@@ -37,4 +37,14 @@
     max-width: 550px;
     margin: 0 auto;
   }
+
+  .btn-hero {
+    background-color: $primary;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $black;
+    border: none;
+  }
 }

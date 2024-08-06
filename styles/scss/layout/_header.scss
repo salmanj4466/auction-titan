@@ -1,88 +1,112 @@
 header {
-  .navbar {
-    background: transparent;
-    transition: all 0.2s;
+}
+.navbar {
+  background-image: url("/articles/nav.png");
+  transition: all 0.2s;
+  width: 100%;
+  background-size: cover;
 
-    &.scrolled {
-      background: $white;
+  &.scrolled {
+    background: $white;
 
-      .nav-item {
-        .nav-link {
-          color: $black;
+    .nav-item {
+      .nav-link {
+        color: $primary;
+      }
+    }
+  }
+
+  @include devices(md) {
+    position: fixed;
+    background: $white;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar-toggler {
+    color: $primary;
+    padding: 0;
+
+    &:hover {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .icon-style {
+    span {
+      background: #ffffffcc;
+      padding: 4px;
+      border-radius: 6px;
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      text-align: center;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .ant-btn {
+    height: 45px;
+  }
+
+  .navbar-brand {
+    img {
+      object-fit: contain;
+    }
+  }
+
+  ul {
+    margin: 0;
+    align-items: center;
+
+    li {
+      padding: 0 15px;
+
+      @include devices(md) {
+        padding: 0 6px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        @include fontstyle(600, 18px, $primary);
+        letter-spacing: 0.5px;
+        font-family: "Barlow", sans-serif !important;
+        text-transform: capitalize;
+
+        &:hover {
+          color: $secondary;
+        }
+
+        @include devices(sm) {
+          font-size: 16px;
         }
       }
-    }
 
-    @include devices(md) {
-      position: fixed;
-      background: $white;
-      width: 100%;
-      z-index: 999;
-    }
-    .navbar-toggler {
-      color: $primary;
-      padding: 0;
-
-      &:hover {
-        outline: none;
-        box-shadow: none;
+      .hero-btn {
+        background-color: $primary;
+        padding: 8px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
       }
-    }
-
-    .icon-style {
-      span {
-        background: #ffffffcc;
-        padding: 4px;
-        border-radius: 6px;
-        width: 35px;
-        height: 35px;
-        display: inline-block;
-        text-align: center;
+      .hero-btn2 {
+        background-color: transparent;
+        border: 1px solid #938f99;
+        padding: 8px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $primary;
       }
-      img {
+      .bars {
+        width: 80px !important;
         cursor: pointer;
-      }
-    }
-
-    .ant-btn {
-      height: 45px;
-    }
-
-    .navbar-brand {
-      img {
-        object-fit: contain;
-      }
-    }
-
-    ul {
-      margin: 0;
-      align-items: center;
-
-      li {
-        padding: 0 15px;
-
-        @include devices(md) {
-          padding: 0 6px;
-        }
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        a {
-          @include fontstyle(600, 18px, $white);
-          letter-spacing: 0.5px;
-          font-family: "Barlow", sans-serif !important;
-          text-transform: uppercase;
-
-          &:hover {
-            color: $secondary;
-          }
-
-          @include devices(sm) {
-            font-size: 16px;
-          }
-        }
       }
     }
   }
