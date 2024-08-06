@@ -1,20 +1,45 @@
 footer {
-  padding: 50px 0;
+  padding: 50px 0 20px;
   h4 {
     font-size: 36px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-family: "Staatliches", sans-serif;
     letter-spacing: 1.5px;
   }
 
   ul {
     li {
-      padding: 5px 0;
+      padding: 6px 0;
       a {
-        font-size: 22px;
-        font-weight: 700;
+        @include fontstyle(22px, 700, $white);
         letter-spacing: 1.5px;
         font-family: "Roboto", sans-serif !important;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: end;
+    li {
+      padding-right: 10px;
+      a {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background: $primary;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+        color: $black;
+
+        &:hover {
+          color: $secondary;
+        }
       }
     }
   }

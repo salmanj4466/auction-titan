@@ -1,43 +1,40 @@
-.our-team {
-  padding: 80px 0;
+.newsletter-section {
+  padding: 40px 0;
   text-align: center;
+  background-image: url("/count-bg.png");
+  background-position: center;
+  background-size: cover;
 
-  @include devices(sm) {
-    padding: 60px 0;
-  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      padding: 0 50px;
+      h2 {
+        @include fontstyle(120px, 400, $white);
+        line-height: 130px;
+        letter-spacing: 2.5px;
+        font-family: "Staatliches", sans-serif;
+        margin-bottom: 0;
+      }
 
-  .ant-card {
-    border-radius: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 8px rgb(62 69 78 / 12%);
-
-    .ant-card-body {
-      padding: 30px 15px;
-    }
-
-    img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-    }
-
-    h5 {
-      @include fontstyle(600, 18px, $black);
-      margin-top: 15px;
-      margin-bottom: 5px;
-    }
-
-    p {
-      @include fontstyle(400, 16px, gray);
-      margin-bottom: 0;
+      h4 {
+        @include fontstyle(60px, 300, $white);
+        line-height: 75px;
+        letter-spacing: 2.5px;
+        font-family: "Staatliches", sans-serif;
+      }
     }
   }
 
-  a {
-    font-weight: 600;
+  p {
+    @include fontstyle(18px, 600, $white);
+    margin-bottom: 25px;
+  }
 
-    &:hover {
-      color: $secondary;
-    }
+  .form-control {
+    max-width: 550px;
+    margin: 0 auto;
   }
 }
