@@ -1,4 +1,5 @@
 .top-ranking {
+  margin: 100px 0;
   h2 {
     @include fontstyle(72px, 400, $primary);
     text-align: center;
@@ -7,10 +8,23 @@
     letter-spacing: 3px;
   }
   .ranking-details {
-    background-color: gray;
+    background-color: #201d22;
     padding: 30px 30px;
     border-radius: 30px;
-    margin: 100px 0;
+    margin: 70px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("/ranking/top.png");
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      border-top-left-radius: 30px;
+    }
 
     .profile {
       text-align: center;
@@ -19,39 +33,45 @@
       align-items: center;
       background-color: $primary;
       width: fit-content;
-      height: 100%;
-      margin: auto;
-      border-radius: 30px;
+      height: 97%;
+      margin-left: auto;
+      margin-top: 35px;
+      border-radius: 40px;
+      position: relative;
+      z-index: 10;
+
+      .serial-no {
+        position: absolute;
+        background-color: $primary;
+        z-index: 99;
+        left: -56px;
+        top: -20px;
+        display: flex;
+        gap: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          @include fontstyle(100px, 600, $white);
+          font-family: $font-staat;
+        }
+      }
+
       .img-box {
         width: 100%;
         height: 400px;
-        background-color: $black;
-        border-radius: 30px;
         position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          width: 90%;
-          height: 90%;
-          border: 2px solid $primary;
-          transform: translate(-50%, -50%);
-          left: 50%;
-          top: 50%;
-          border-radius: 30px;
-        }
         img {
-          width: 80%;
+          width: 100%;
           height: 100%;
-          border-radius: 30px;
-          padding: 10px;
-          object-fit: cover;
-          padding-bottom: 20px;
         }
       }
 
       .person-detail {
         h3 {
-          font-size: 24px;
+          font-size: 38px;
           padding: 5px 0;
           text-transform: uppercase;
           text-shadow: 3px 1px 8px $black;
@@ -59,107 +79,144 @@
         }
         p {
           padding: 5px 0;
-          font-size: 18px;
+          font-size: 28px;
           text-shadow: 3px 1px 8px $black;
         }
         h5 {
           color: $black;
           font-style: italic;
           letter-spacing: 1px;
-          font-size: 22px;
+          font-size: 34px;
           font-weight: 800;
           text-shadow: 3px 1px 8px $black;
         }
         h6 {
-          @include fontstyle(28px, 600, $white);
+          @include fontstyle(36px, 600, $white);
           text-shadow: 3px 1px 8px $black;
         }
-        img {
-          margin: 10px 0;
-        }
-      }
-    }
-
-    .player-card {
-      background-color: $pink;
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      position: relative;
-      padding: 18px 40px;
-      border-top-right-radius: 0px !important;
-      border-radius: 30px;
-
-      .player-name {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        background-color: #363131;
-        right: -264px;
-        top: -27px;
-        padding: 6px 24px;
-        width: 57%;
-        border-top-right-radius: 20px;
-        h3 {
-          text-transform: uppercase;
-          font-family: $font-staat;
-          letter-spacing: 3px;
-          font-size: 36px;
-          margin: 0;
-        }
-      }
-
-      .serial-no {
-        display: flex;
-        gap: 10px;
-        h2 {
-          @include fontstyle(100px, 600, $white);
-          font-family: $font-staat;
-        }
-      }
-
-      .user-profile {
-        background-color: red;
-        width: 200px;
-
-        img {
-          width: 220px;
-          position: absolute;
-          bottom: 0;
-        }
-      }
-
-      .player-info {
-        h3 {
-          font-size: 28px;
-          &:nth-child(2) {
-            font-size: 40px;
-            color: $black;
-            font-weight: 700;
-            font-style: italic;
-          }
-        }
-      }
-
-      .ratings {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: auto;
         .badge-img {
-          width: 50%;
-          margin-bottom: 10px;
+          margin: 20px 0;
+          width: 100px;
         }
-        .stars {
-          img {
-            // width: 30px;
-          }
+        .star {
+          width: 40px;
         }
       }
     }
 
-    .mid {
-      margin: 150px 0;
+    .rankings-card {
+      margin-top: 112px;
+      position: relative;
+      z-index: 10;
+
+      .player-card {
+        background-color: $pink;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        padding: 18px 40px;
+        border-top-right-radius: 0px !important;
+        border-radius: 30px;
+
+        .player-name {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          background-color: #363131;
+          right: -230px;
+          top: -27px;
+          padding: 6px 24px;
+          width: 57%;
+          border-top-right-radius: 20px;
+          h3 {
+            text-transform: uppercase;
+            font-family: $font-staat;
+            letter-spacing: 3px;
+            font-size: 36px;
+            margin: 0;
+          }
+        }
+
+        .serial-no {
+          display: flex;
+          gap: 10px;
+          h2 {
+            @include fontstyle(65px, 600, $white);
+            font-family: $font-staat;
+          }
+        }
+
+        .user-profile {
+          background-color: red;
+          width: 200px;
+
+          img {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+
+        .player-info {
+          h3 {
+            font-size: 24px;
+            &:nth-child(2) {
+              font-size: 28px;
+              color: $black;
+              font-weight: 700;
+              font-style: italic;
+            }
+          }
+        }
+
+        .ratings {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: auto;
+          .badge-img {
+            width: 50%;
+            margin-bottom: 10px;
+          }
+          .stars {
+            img {
+              // width: 30px;
+            }
+          }
+        }
+      }
+
+      .mid {
+        margin: 150px 0;
+      }
+    }
+
+    .bottom-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-bottom-right-radius: 30px;
+    }
+  }
+
+  a {
+    @include fontstyle(22px, 600, $black);
+    background: transparent;
+    border: 1px solid $primary;
+    padding: 10px 80px;
+    margin-top: 40px !important;
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+    position: relative;
+    z-index: 100;
+    transition: all 0.4s;
+    width: fit-content;
+    &:hover {
+      background-color: $primary;
+      border: 1px solid $primary;
+      color: white;
     }
   }
 }

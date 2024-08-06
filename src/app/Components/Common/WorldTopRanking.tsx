@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import Link from "next/link";
 
 const WorldTopRanking = () => {
   return (
@@ -7,11 +8,15 @@ const WorldTopRanking = () => {
         <div className="container">
           <h2> Top mundial </h2>
           <div className="ranking-details">
-            <Row gutter={[16, 16]}>
-              <Col span={6}>
+            <Row gutter={[48, 16]}>
+              <Col span={8}>
                 <div className="profile">
+                  <div className="serial-no">
+                    <h2>#</h2>
+                    <h2>1</h2>
+                  </div>
                   <div className="img-box">
-                    <img src="/ranking/placeholder.webp" alt="" />
+                    <img src="/ranking/ranking1.png" alt="" />
                   </div>
                   <div className="person-detail">
                     <h3>
@@ -21,18 +26,22 @@ const WorldTopRanking = () => {
                     <p>Cholula</p>
                     <h5>Leyenda</h5>
                     <h6>3500 puntos</h6>
-                    <img src="/ranking/badge.png" alt="" />
+                    <img
+                      src="/ranking/badge.png"
+                      alt=""
+                      className="badge-img"
+                    />
                     <div className="stars">
-                      <img src="/ranking/star.png" alt="" />
-                      <img src="/ranking/star.png" alt="" />
-                      <img src="/ranking/star.png" alt="" />
-                      <img src="/ranking/star.png" alt="" />
-                      <img src="/ranking/star.png" alt="" />
+                      <img src="/ranking/star.png" alt="" className="star" />
+                      <img src="/ranking/star.png" alt="" className="star" />
+                      <img src="/ranking/star.png" alt="" className="star" />
+                      <img src="/ranking/star.png" alt="" className="star" />
+                      <img src="/ranking/star.png" alt="" className="star" />
                     </div>
                   </div>
                 </div>
               </Col>
-              <Col span={18}>
+              <Col span={16} className="rankings-card">
                 <div
                   className="player-card"
                   style={{ backgroundColor: "#df54ff" }}
@@ -137,7 +146,9 @@ const WorldTopRanking = () => {
                 </div>
               </Col>
             </Row>
+            <img src="/ranking/bottom.png" alt="" className="bottom-img" />
           </div>
+          <Link href=""> Visita el ranking </Link>
         </div>
       </div>
     </>

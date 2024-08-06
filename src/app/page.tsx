@@ -12,8 +12,8 @@ export default function Home() {
       <Newsletter />
       <LiveTournament />
       <CompanyBrands />
-      <Articles />
       <WorldTopRanking />
+      <Articles />
     </main>
   );
 }

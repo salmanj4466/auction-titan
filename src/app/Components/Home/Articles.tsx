@@ -1,28 +1,27 @@
 import { Col, Row } from "antd";
 import Link from "next/link";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
 
 const Articles = () => {
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     // the naming can be any, depends on you.
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 5,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //   },
-  // };
+  const cardData = [
+    {
+      img: "/articles/article1.png",
+      title: "Título",
+      description:
+        "Nulla vel est sed felis venenatis tempus ullamcorper vel leo. In varius odio et tristique tincidunt. Donec ut velit consequat...",
+    },
+    {
+      img: "/articles/article2.png",
+      title: "Título",
+      description:
+        "Nulla vel est sed felis venenatis tempus ullamcorper vel leo. In varius odio et tristique tincidunt. Donec ut velit consequat...",
+    },
+    {
+      img: "/articles/article3.png",
+      title: "Título",
+      description:
+        "Nulla vel est sed felis venenatis tempus ullamcorper vel leo. In varius odio et tristique tincidunt. Donec ut velit consequat...",
+    },
+  ];
 
   return (
     <>
@@ -31,44 +30,21 @@ const Articles = () => {
           <h2>Nuestros artículos más leidos</h2>
 
           <Row gutter={16}>
-            <Col span={8}>
-              <div className="article-card">
-                <img src="/articles/article1.png" alt="" />
-                <h3>Título</h3>
-                <p>
-                  Nulla vel est sed felis venenatis tempus ullamcorper vel leo.
-                  In varius odio et tristique tincidunt. Donec ut velit
-                  consequat...
-                </p>
-
-                <Link href="/">Lee más </Link>
-              </div>
-            </Col>
-            <Col span={8}>
-              <div className="article-card">
-                <img src="/articles/article2.png" alt="" />
-                <h3>Título</h3>
-                <p>
-                  Nulla vel est sed felis venenatis tempus ullamcorper vel leo.
-                  In varius odio et tristique tincidunt. Donec ut velit
-                  consequat...
-                </p>
-
-                <Link href="/">Lee más </Link>
-              </div>
-            </Col>
-            <Col span={8}>
-              <div className="article-card">
-                <img src="/articles/article3.png" alt="" />
-                <h3>Título</h3>
-                <p>
-                  Nulla vel est sed felis venenatis tempus ullamcorper vel leo.
-                  In varius odio et tristique tincidunt. Donec ut velit
-                  consequat...
-                </p>
-                <Link href="/">Lee más </Link>
-              </div>
-            </Col>
+            {cardData.map((elm) => (
+              <Col span={8}>
+                <div className="article-card">
+                  <img src={elm.img} alt="" />
+                  <h3>{elm.title}</h3>
+                  <p>{elm.description}</p>
+                  <Link href="/">Lee más </Link>
+                  <img
+                    src="/articles/bottom.png"
+                    alt=""
+                    className="bottom-card"
+                  />
+                </div>
+              </Col>
+            ))}
             <button className="btn-blog"> Visita nuestro blog </button>
           </Row>
         </div>

@@ -1,6 +1,7 @@
 .company-brands {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 40px 0;
   overflow: hidden;
   .logos {
@@ -9,5 +10,8 @@
     gap: 50px;
     padding: 0 30px;
     border-right: 2px solid rgba(255, 255, 255, 0.85);
+    &:nth-child(4) {
+      border-right: none;
+    }
   }
 }

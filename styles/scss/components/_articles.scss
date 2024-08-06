@@ -1,7 +1,8 @@
 .articles {
-  background-image: url("/articles/bg1.png");
+  background-image: url("/articles/bg.png");
   width: 100%;
   height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 0;
   position: relative;
@@ -45,6 +46,7 @@
         padding-bottom: 50px;
         padding-right: 55px;
         color: $white;
+        font-size: 18px;
       }
 
       a {
@@ -75,22 +77,18 @@
         height: 100%;
         border-top-left-radius: 30px;
       }
-      // &::before {
-      //   content: "";
-      //   background-image: url("/articles/bottom.png");
-      //   position: absolute;
-      //   background-repeat: no-repeat;
-      //   bottom: -983px;
-      //   right: -116px;
-      //   width: 100%;
-      //   height: 100%;
-      // }
+      .bottom-card {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+      }
     }
 
     .btn-blog {
       @include fontstyle(22px, 600, $black);
       background: $primary;
-      border: none;
+      border: 1px solid $primary;
       padding: 10px 80px;
       margin-top: 60px !important;
       display: flex;
