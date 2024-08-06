@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -7,6 +8,9 @@ const Hero = () => {
         <div className="container">
           <Row>
             <Col xs={24}></Col>
+            <div className="hero-btn">
+              <Link href=""> INSCRIBETE </Link>
+            </div>
           </Row>
         </div>
       </section>

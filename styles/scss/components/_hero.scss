@@ -3,8 +3,28 @@
   background-image: url("/hero-bg.png");
   background-size: cover;
   height: 1020px;
+  position: relative;
 
   @include devices(md) {
     height: 850px;
+  }
+
+  .hero-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 80%;
+    a {
+      background-color: $primary;
+      padding: 15px 40px;
+      border-radius: 30px;
+      font-size: 24px;
+      font-weight: 500;
+      color: $black;
+    }
   }
 }

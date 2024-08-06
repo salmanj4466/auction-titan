@@ -27,8 +27,17 @@
       }
     }
   }
+  h3 {
+    @include fontstyle(68px, 400, $white);
+    text-transform: uppercase;
+    font-family: $font-staat;
+    letter-spacing: 3px;
+    position: relative;
+    width: fit-content;
+  }
   p {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 700;
   }
 
   img {
@@ -53,10 +62,10 @@
       border-bottom-left-radius: 20px;
     }
     h3 {
-      @include fontstyle(52px, 400, $white);
+      @include fontstyle(60px, 400, $white);
       text-transform: uppercase;
-      padding: 3px 40px;
-      letter-spacing: 3px;
+      padding: 0px 40px;
+      letter-spacing: 2.5px;
       font-family: $font-staat;
     }
   }

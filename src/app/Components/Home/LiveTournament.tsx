@@ -11,7 +11,7 @@ const LiveTournament = () => {
           <Row gutter={[24, 16]} className="mt-5">
             <Col span={12}>
               <div className="torneo-de">
-                <h2>torneo de 12 de agosto</h2>
+                <h3>torneo de 12 de agosto</h3>
                 <p>
                   ¡Ve el último torneo en vivo y directo!
                   <br />
