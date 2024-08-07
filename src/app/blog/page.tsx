@@ -1,7 +1,13 @@
+import BlogsCategory from "../Components/blog/BlogsCategory";
+import Hero from "../Components/blog/Hero";
+
 const Blog = () => {
   return (
     <>
-      <p>Blog Page</p>
+      <div className="blog-page">
+        <Hero />
+        <BlogsCategory />
+      </div>
     </>
   );
 };
