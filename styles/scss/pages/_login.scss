@@ -1,0 +1,11 @@
+.auth-section {
+  padding: 50px 0;
+  background-image: url("/auth/auth-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .auth-img {
+    border-radius: 16px;
+  }
+}
