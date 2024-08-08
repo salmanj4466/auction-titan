@@ -1,11 +1,9 @@
-.blog-page {
+.blog-detail {
   background-image: url("/blog/blog-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 40px 0 40px 0;
-}
-
-.blog {
+  padding-top: 45px;
+  padding-bottom: 70px;
   h2 {
     @include fontstyle(80px, 400, $secondary);
     font-family: $font-staat;
@@ -13,65 +11,88 @@
     text-align: center;
   }
 
-  .blog-banner {
-    background-color: #3b0c56;
-    padding: 50px;
+  .blog-detail-content {
+    background-color: $black;
+    padding: 80px 200px 150px 200px;
     border-radius: 30px;
     box-shadow: -7px 16px 24.3px 0px #ffffff33;
     width: 90%;
     margin: auto;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("/blog/top.png");
+      width: 370px;
+      height: 430px;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 80px 0 50px 0;
+      z-index: 1000;
+    }
+    h3 {
+      @include fontstyle(36px, 700, $white);
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    p {
+      @include fontstyle(16px, 500, $white);
+      text-align: justify;
+      margin: 0;
+    }
     .img {
       width: 100%;
-      img {
-        width: 100%;
-        border-radius: 30px;
-      }
+      border-radius: 30px;
+      margin: 60px 0;
     }
-
-    .content {
-      h3 {
-        @include fontstyle(36px, 700, $white);
-        margin: 0;
-      }
-      p {
-        @include fontstyle(18px, 500, $white);
-        width: 400px;
-        padding: 20px 0;
-      }
-      a {
-        background-color: $primary;
-        color: $black;
-        padding: 10px 30px;
-        font-weight: 500;
-        font-size: 16px;
-        border-radius: 20px;
-      }
+    .bottom {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 370px;
+      height: 430px;
+      border-bottom-right-radius: 30px;
     }
   }
 }
 
-// blogs-category
+// blogs-lecture-category
 
-.blog-category {
+.blog-leacture-category {
   margin-top: 100px !important;
   width: 90%;
   margin: auto;
   display: flex;
-  align-items: center;
-  gap: 50px;
+  flex-direction: column;
 
-  .ant-tabs .ant-tabs-tab {
-    font-size: 16px;
-    font-weight: 500;
-    color: $primary;
-    cursor: pointer;
+  h2 {
+    @include fontstyle(36px, 400, $primary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-align: left;
   }
-  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: $primary !important;
-    border: none !important;
-  }
-  .ant-tabs-top > .ant-tabs-nav::before {
-    border: none !important;
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .ant-tabs .ant-tabs-tab {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary;
+      cursor: pointer;
+    }
+    .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: $primary !important;
+      border: none !important;
+    }
+    .ant-tabs-top > .ant-tabs-nav::before {
+      border: none !important;
+    }
   }
 
   button {
@@ -91,7 +112,7 @@
   row-gap: 115px;
   column-gap: 40px;
   margin-bottom: 100px;
-  margin-top: 45px;
+  margin-top: 40px;
   height: auto;
   .category {
     position: relative;
@@ -125,6 +146,7 @@
         font-size: 16px;
         font-weight: 700;
         color: #938f99;
+        position: relative;
         &::after {
           content: "";
           position: absolute;

@@ -4,7 +4,7 @@ import { Tabs } from "antd";
 import Link from "next/link";
 import React from "react";
 
-const BlogsCategory = () => {
+const Recomendation = () => {
   const CategoryData = [
     {
       img: "/blog/category1.png",
@@ -46,46 +46,6 @@ const BlogsCategory = () => {
         },
       },
     },
-    {
-      img: "/blog/category5.png",
-      tag: "Categoría 1",
-      title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
-      color: {
-        style: {
-          color: "#DF54FF",
-        },
-      },
-    },
-    {
-      img: "/blog/category6.png",
-      tag: "Categoría 1",
-      title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
-      color: {
-        style: {
-          color: "#04DDE5",
-        },
-      },
-    },
-    {
-      img: "/blog/category7.png",
-      tag: "Categoría 1",
-      title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
-      color: {
-        style: {
-          color: "#0029C2",
-        },
-      },
-    },
-    {
-      img: "/blog/category8.png",
-      tag: "Categoría 1",
-      title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
-      color: {
-        style: {
-          color: "#4E169F",
-        },
-      },
-    },
   ];
 
   const items = [
@@ -105,7 +65,7 @@ const BlogsCategory = () => {
       //   children: "Content of Tab Pane 3",
     },
     {
-      key: "3",
+      key: "4",
       label: "Categoría 4",
       //   children: "Content of Tab Pane 3",s
     },
@@ -118,9 +78,12 @@ const BlogsCategory = () => {
   return (
     <>
       <div className="container">
-        <div className="blog-category">
-          <button> Todos los artículos </button>
-          <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <div className="blog-leacture-category">
+          <h2>Recomendaciones</h2>
+          <div className="tabs">
+            <button> Todos los artículos </button>
+            <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          </div>
         </div>
         <div className="category-cards">
           {CategoryData.map((elm) => (
@@ -139,4 +102,4 @@ const BlogsCategory = () => {
   );
 };
 
-export default BlogsCategory;
+export default Recomendation;
