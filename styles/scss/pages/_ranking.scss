@@ -1,0 +1,245 @@
+.ranking {
+  background-image: url("/ranking/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 55px 0 90px 0;
+  h1 {
+    @include fontstyle(80px, 400, $secondary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  h2 {
+    @include fontstyle(72px, 400, $primary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+
+  .search-users {
+    width: 60%;
+    margin: auto;
+    .search {
+      position: relative;
+      .magnifier {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 30px;
+        color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        cursor: pointer;
+      }
+      input {
+        height: 51px;
+        border-radius: 25px;
+        padding: 0 50px;
+        border: none;
+      }
+    }
+    .related-suggested {
+      background-color: #2a2634;
+      border-radius: 20px;
+      padding: 19px 30px;
+      margin-top: 17px;
+
+      .player-heading-related {
+        @include fontstyle(18px, 700, #aaa8ae);
+        padding-bottom: 16px;
+      }
+      .player-heading-suggested {
+        @include fontstyle(18px, 700, #aaa8ae);
+        padding-bottom: 16px;
+        padding-top: 32px;
+      }
+
+      .player {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        .player-details {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          .img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #4e169f;
+            object-fit: cover;
+          }
+          .player-name {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            p {
+              font-size: 18px;
+              font-weight: 700;
+              color: $white;
+              margin: 0;
+              span {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+
+      h3 {
+        @include fontstyle(18px, 700, #938f99);
+        padding-top: 50px;
+        padding-bottom: 10px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// top-four-player
+
+.top-players {
+  background-image: url("/ranking/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 55px 0 90px 0;
+  .head {
+    text-align: center;
+    h2 {
+      @include fontstyle(72px, 700, $primary);
+    }
+    p {
+      @include fontstyle(36px, 700, $white);
+    }
+  }
+
+  .all-positions {
+    margin-top: 70px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: end;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+
+      .player-details {
+        height: 616px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding: 0 20px;
+        // &:nth-child(2) {
+        //   height: 540px;
+        //   background:linear-gradient(180deg, rgba(0, 41, 194, 1) 4%, rgba(87, 112, 208, 1) 100%),
+        // }
+
+        h1 {
+          @include fontstyle(80px, 400, $white);
+          position: absolute;
+          top: -20px;
+          left: 0;
+          font-family: $font-staat;
+          letter-spacing: 2.5px;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 15px;
+        }
+        h3 {
+          @include fontstyle(36px, 600, $black);
+          text-align: center;
+          padding-bottom: 30px;
+        }
+        .name-points {
+          span {
+            @include fontstyle(18px, 500, $black);
+          }
+          h6 {
+            @include fontstyle(29px, 700, $black);
+            font-style: italic;
+          }
+          p {
+            @include fontstyle(22px, 700, $black);
+          }
+        }
+        .img {
+          text-align: center;
+          img {
+            width: 50px;
+            height: 60px;
+            margin-bottom: 10px;
+          }
+          .stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   general-ranking
+  .general-ranking {
+    margin-top: 100px;
+    h1 {
+      @include fontstyle(42px, 700, $primary);
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .leaderboard {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      color: white;
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        th {
+          font-size: 18px;
+          font-weight: 700;
+          padding: 10px;
+          text-align: center;
+        }
+        td {
+          font-size: 16px;
+          font-weight: 500;
+          padding: 10px;
+          text-align: center;
+        }
+
+        th {
+          color: #fff;
+        }
+
+        th,
+        td {
+          border-bottom: 1px solid #85868c;
+          border-right: 1px solid #85868c;
+          &:nth-child(5) {
+            border-right: none;
+          }
+        }
+
+        td {
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
