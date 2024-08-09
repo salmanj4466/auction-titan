@@ -136,10 +136,6 @@
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         padding: 0 20px;
-        // &:nth-child(2) {
-        //   height: 540px;
-        //   background:linear-gradient(180deg, rgba(0, 41, 194, 1) 4%, rgba(87, 112, 208, 1) 100%),
-        // }
 
         h1 {
           @include fontstyle(80px, 400, $white);
