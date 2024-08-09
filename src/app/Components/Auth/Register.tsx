@@ -1,78 +1,107 @@
 "use client";
-import { Checkbox, Form, Input } from "antd";
+import { Checkbox, Col, Form, Input, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const RegisterComponent = () => {
+const RgisterComponent = () => {
   return (
     <>
-      <div className="flex justify-center items-center h-screen p-5">
-        <div className="bg-white rounded-lg shadow w-[430px] py-8 px-10">
-          <Image
-            className="m-auto"
-            width={160}
-            height={30}
-            src="/logo.svg"
-            alt="logo"
-          />
-          <h2 className="text-center text-lg mt-6 mb-1">
-            Welcome to Restaurant AI
-          </h2>
-          <p className="text-center text-gray text-sm mb-8">
-            Login to continue
-          </p>
-          <hr className="border-[#DDDDDD] mb-6" />
+      <section className="auth-section">
+        <div className="container">
+          <Row gutter={20} className="justify-content-center">
+            <Col md={22}>
+              <div className="bg-dark rounded-xl">
+                <Row className="align-items-center">
+                  <Col md={12} className="px-5">
+                    <h3 className="text-center mb-5">Registra tus datos</h3>
+                    <form>
+                      <div className="form-group mb-4">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="ejemplo@gmail.com"
+                        />
+                      </div>
+                      <div className="form-group mb-4">
+                        <input
+                          type="password"
+                          className="form-control"
+                          placeholder="Contraseña"
+                        />
+                      </div>
 
-          <Form layout="vertical">
-            <Form.Item
-              className="mb-4"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your Email!",
-                },
-              ]}
-            >
-              <Input placeholder="Your Email" />
-            </Form.Item>
+                      <div className="form-group mb-4">
+                        <input
+                          type="password"
+                          className="form-control"
+                          placeholder="Confirma contraseña"
+                        />
+                      </div>
 
-            <Form.Item
-              className="mb-3"
-              name="password"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your Password!",
-                },
-              ]}
-            >
-              <Input.Password placeholder="Password" />
-            </Form.Item>
+                      <button type="submit" className="btn btn-warning w-100">
+                        Iniciar sesión
+                      </button>
+                    </form>
 
-            <div className="flex justify-between items-center mb-4">
-              <Form.Item
-                name="remember"
-                valuePropName="checked"
-                className="mb-0"
-              >
-                <Checkbox className="text-gray text-sm">Remember me</Checkbox>
-              </Form.Item>
+                    <hr className="my-5" />
 
-              <Link href="/" className="text-primary font-medium text-sm">
-                Forgot Password?
-              </Link>
-            </div>
-
-            <button className="block bg-primary rounded-lg text-white w-full py-2.5 px-8">
-              Continue
-            </button>
-          </Form>
+                    <button
+                      type="submit"
+                      className="btn btn-light text-start w-100 mb-4 px-4"
+                    >
+                      <Image
+                        className="me-3"
+                        width={30}
+                        height={30}
+                        src="/auth/google.svg"
+                        alt="google"
+                      />
+                      Continua con Google
+                    </button>
+                    <button
+                      type="submit"
+                      className="btn btn-light text-start w-100 mb-4 px-4"
+                    >
+                      <Image
+                        className="me-3"
+                        width={30}
+                        height={30}
+                        src="/auth/fb.svg"
+                        alt="fb"
+                      />
+                      Continua con Facebook
+                    </button>
+                    <button
+                      type="submit"
+                      className="btn btn-light text-start w-100 mb-4 px-4"
+                    >
+                      <Image
+                        className="me-3"
+                        width={30}
+                        height={30}
+                        src="/auth/apple.svg"
+                        alt="apple"
+                      />
+                      Continua con Apple
+                    </button>
+                  </Col>
+                  <Col md={12}>
+                    <Image
+                      className="img-fluid auth-img"
+                      width={605}
+                      height={824}
+                      src="/auth/register.png"
+                      alt="register"
+                    />
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
         </div>
-      </div>
+      </section>
     </>
   );
 };
 
-export default RegisterComponent;
+export default RgisterComponent;

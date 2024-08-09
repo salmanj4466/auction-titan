@@ -54,3 +54,11 @@ body {
 .text-primary {
   color: $primary !important;
 }
+
+.bg-dark {
+  background: $black;
+}
+
+.rounded-xl {
+  border-radius: 16px;
+}
