@@ -1,0 +1,16 @@
+.gallery-slider {
+  padding: 40px 0;
+  h2 {
+    @include fontstyle(80px, 500, $secondary);
+    text-align: center;
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    margin: 0;
+  }
+  p {
+    @include fontstyle(42px, 700, $white);
+    text-align: center;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+}
