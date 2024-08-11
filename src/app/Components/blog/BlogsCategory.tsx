@@ -2,11 +2,12 @@
 
 import { Tabs } from "antd";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const BlogsCategory = () => {
   const CategoryData = [
     {
+      key: "1",
       img: "/blog/category1.png",
       tag: "Categoría 1",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
@@ -17,8 +18,9 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "2",
       img: "/blog/category2.png",
-      tag: "Categoría 1",
+      tag: "Categoría 2",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
       color: {
         style: {
@@ -27,6 +29,7 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "1",
       img: "/blog/category3.png",
       tag: "Categoría 1",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
@@ -37,8 +40,9 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "3",
       img: "/blog/category4.png",
-      tag: "Categoría 1",
+      tag: "Categoría 3",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
       color: {
         style: {
@@ -47,8 +51,9 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "3",
       img: "/blog/category5.png",
-      tag: "Categoría 1",
+      tag: "Categoría 3",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
       color: {
         style: {
@@ -57,6 +62,7 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "1",
       img: "/blog/category6.png",
       tag: "Categoría 1",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
@@ -67,8 +73,9 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "4",
       img: "/blog/category7.png",
-      tag: "Categoría 1",
+      tag: "Categoría 4",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
       color: {
         style: {
@@ -77,8 +84,9 @@ const BlogsCategory = () => {
       },
     },
     {
+      key: "2",
       img: "/blog/category8.png",
-      tag: "Categoría 1",
+      tag: "Categoría 2",
       title: "Ut fringilla tortor neque, non vulputate massa euismod quis.",
       color: {
         style: {
@@ -90,40 +98,62 @@ const BlogsCategory = () => {
 
   const items = [
     {
+      key: "all",
+      label: "Todos los artículos",
+    },
+    {
       key: "1",
       label: "Categoría 1",
-      //   children: "Content of Tab Pane 1",
     },
     {
       key: "2",
       label: "Categoría 2",
-      //   children: "Content of Tab Pane 2",
     },
     {
       key: "3",
       label: "Categoría 3",
-      //   children: "Content of Tab Pane 3",
     },
     {
-      key: "3",
+      key: "4",
       label: "Categoría 4",
-      //   children: "Content of Tab Pane 3",s
     },
   ];
 
-  const onChange = (key: any) => {
-    console.log(key);
+  const [activeKey, setActiveKey] = useState<string>("all");
+
+  const handleTabChange = (key: string) => {
+    setActiveKey(key);
   };
+
+  const filteredCards =
+    activeKey === "all"
+      ? CategoryData
+      : CategoryData.filter((card) => card.key === activeKey);
+
+  console.log(
+    window.location.pathname === "/blogLecture"
+      ? "blogLectureCategoryClass"
+      : null
+  );
 
   return (
     <>
       <div className="container">
-        <div className="blog-category">
-          <button> Todos los artículos </button>
-          <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+        <div
+          className={
+            window.location.pathname === "/blogLecture"
+              ? "blogLectureCategoryClass"
+              : "blog-category"
+          }
+        >
+          <Tabs
+            defaultActiveKey="all"
+            items={items}
+            onChange={handleTabChange}
+          />
         </div>
         <div className="category-cards">
-          {CategoryData.map((elm) => (
+          {filteredCards.map((elm) => (
             <div className="category">
               <img src={elm.img} alt="" />
               <div className="content">

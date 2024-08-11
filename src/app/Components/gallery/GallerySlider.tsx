@@ -26,12 +26,12 @@ const responsive = {
 const GallerySlider = () => {
   const images = [
     "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
-    "/gallery/gallery-img.png",
+    "/gallery/g1.jpg",
+    "/gallery/g2.jpg",
+    "/gallery/g3.jpg",
+    "/gallery/g4.jpg",
+    "/gallery/g1.jpg",
+    "/gallery/g2.jpg",
   ];
 
   const [activeImage, setActiveImage] = useState(images[0]);

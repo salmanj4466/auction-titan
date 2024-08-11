@@ -1,0 +1,158 @@
+.player-profile {
+  background-image: url("/player-profile/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 65px 0 80px 0;
+
+  .container {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  h1 {
+    @include fontstyle(80px, 400, $secondary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .content {
+    background-color: $black;
+    border-radius: 30px;
+    padding: 40px 40px 60px 40px;
+    .details-top {
+      position: relative;
+      padding: 30px;
+      .profile {
+        width: 80%;
+      }
+
+      .imgs {
+        display: flex;
+        align-items: flex-start;
+        justify-content: end;
+        gap: 10px;
+        position: relative;
+        z-index: 10;
+        img {
+          width: 100px;
+          margin-top: 25px;
+        }
+        .points {
+          background-color: $primary;
+          width: 188px;
+          height: 188px;
+          border-radius: 30px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: $black;
+          h2 {
+            @include fontstyle(56px, 700, $black);
+          }
+          p {
+            @include fontstyle(24px, 700, $black);
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .name {
+          position: absolute;
+          left: -6px;
+          bottom: 0;
+          h3 {
+            @include fontstyle(36px, 700, $white);
+          }
+          h5 {
+            @include fontstyle(28px, 700, $white);
+          }
+        }
+      }
+
+      .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        height: 100%;
+      }
+      .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        height: 100%;
+      }
+    }
+
+    .details-bottom {
+      margin-top: 30px;
+      .tier-boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-right: 2px solid $white;
+        padding-right: 30px;
+        max-width: 80%;
+        margin: auto;
+        .box {
+          background-color: $primary;
+          width: 100%;
+          height: 158px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 30px;
+          position: relative;
+          overflow: hidden;
+          &:nth-child(1) {
+            background-color: $blue;
+          }
+          &:nth-child(2) {
+            background-color: $purple;
+          }
+          &:nth-child(3) {
+            background-color: $pink;
+          }
+          .bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 16px;
+            background-color: $primary;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 40px;
+            margin-top: auto;
+          }
+          p {
+            @include fontstyle(24px, 400, $white);
+            margin: 0;
+          }
+          h2 {
+            @include fontstyle(40px, 700, $white);
+            margin: 0;
+          }
+        }
+      }
+
+      .details {
+        // margin-left: -20px;
+        p {
+          @include fontstyle(20px, 700, $white);
+          text-align: justify;
+          margin: 0;
+          span {
+            @include fontstyle(36px, 700, $white);
+          }
+        }
+      }
+    }
+  }
+}

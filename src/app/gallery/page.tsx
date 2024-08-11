@@ -1,5 +1,5 @@
 import React from "react";
-import GallerySlider from "../Components/gallery/GallerySlider";
+import GallerySlider from "../Components/Gallery/GallerySlider";
 
 const GAllery = () => {
   return (

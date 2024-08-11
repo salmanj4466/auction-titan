@@ -52,37 +52,56 @@
 
 // blogs-category
 
-.blog-category {
-  margin-top: 100px !important;
+.blogLectureCategoryClass {
+  margin-top: 0px !important;
   width: 90%;
   margin: auto;
   display: flex;
   align-items: center;
   gap: 50px;
+}
 
-  .ant-tabs .ant-tabs-tab {
-    font-size: 16px;
-    font-weight: 500;
-    color: $primary;
-    cursor: pointer;
-  }
-  .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: $primary !important;
-    border: none !important;
-  }
-  .ant-tabs-top > .ant-tabs-nav::before {
-    border: none !important;
-  }
+.blog-category {
+  margin-top: 70px !important;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.ant-tabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary;
+  cursor: pointer;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: $black !important;
+  background-color: $primary;
+  padding: 8px 20px !important;
+  border-radius: 20px !important;
+  border: none !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
 
-  button {
-    background-color: $primary;
-    color: $black;
-    padding: 8px 20px;
-    border-radius: 20px;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-  }
+  border: none !important;
+}
+.ant-tabs-top > .ant-tabs-nav::before {
+  border: none !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: red !important;
+}
+
+button {
+  background-color: $primary;
+  color: $black;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .category-cards {
@@ -91,7 +110,7 @@
   row-gap: 115px;
   column-gap: 40px;
   margin-bottom: 100px;
-  margin-top: 45px;
+  margin-top: 40px;
   height: auto;
   .category {
     position: relative;
@@ -125,6 +144,7 @@
         font-size: 16px;
         font-weight: 700;
         color: #938f99;
+        position: relative;
         &::after {
           content: "";
           position: absolute;

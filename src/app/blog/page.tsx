@@ -1,5 +1,5 @@
-import BlogsCategory from "../Components/blog/BlogsCategory";
-import Hero from "../Components/blog/Hero";
+import BlogsCategory from "../Components/Blog/BlogsCategory";
+import Hero from "../Components/Blog/Hero";
 
 const Blog = () => {
   return (
