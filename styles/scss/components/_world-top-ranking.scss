@@ -208,25 +208,4 @@
       border-bottom-right-radius: 30px;
     }
   }
-
-  a {
-    @include fontstyle(22px, 600, $black);
-    background: transparent;
-    color: $primary;
-    border: 1px solid $primary;
-    padding: 10px 80px;
-    margin-top: 40px !important;
-    display: flex;
-    margin: auto;
-    border-radius: 30px;
-    position: relative;
-    z-index: 100;
-    transition: all 0.4s;
-    width: fit-content;
-    &:hover {
-      background-color: $primary;
-      border: 1px solid $primary;
-      color: white;
-    }
-  }
 }

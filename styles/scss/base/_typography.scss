@@ -49,6 +49,81 @@ body {
   border: 1px solid $white !important;
 }
 
+.btn-lg-warning {
+  background-color: $primary;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  color: $black;
+  border: 2px solid $primary;
+  &:hover {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+  }
+}
+
+.btn-md-warning {
+  @include fontstyle(22px, 600, $black);
+  background: $primary;
+  border: 1px solid $primary;
+  padding: 10px 80px;
+  margin-top: 60px !important;
+  display: flex;
+  margin: auto;
+  border-radius: 30px;
+  box-shadow: 3px 3px 0px 0px #ffb202;
+  position: relative;
+  z-index: 100;
+  transition: all 0.4s;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+}
+
+.btn-outline-shadow {
+  border: 1px solid $primary;
+  padding: 10px 45px;
+  text-decoration: none;
+  color: $primary;
+  border-radius: 25px;
+  font-weight: 500;
+  color: $primary;
+  font-size: 24px;
+  box-shadow: 3px 3px 0px 0px #ffb202;
+  position: relative;
+  z-index: 1000;
+  transition: all 0.4s;
+  &:hover {
+    background-color: $primary;
+    color: $black;
+  }
+}
+
+.btn-outline-normal {
+  @include fontstyle(22px, 600, $black);
+  background: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  padding: 10px 80px;
+  margin-top: 40px !important;
+  display: flex;
+  margin: auto;
+  border-radius: 30px;
+  position: relative;
+  z-index: 100;
+  transition: all 0.4s;
+  width: fit-content;
+  &:hover {
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: white;
+  }
+}
+
 // Text
 
 .text-primary {

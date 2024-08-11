@@ -36,7 +36,9 @@ const Articles = () => {
                   <img src={elm.img} alt="" />
                   <h3>{elm.title}</h3>
                   <p>{elm.description}</p>
-                  <Link href="/">Lee más </Link>
+                  <Link href="/" className="btn-outline-shadow">
+                    Lee más{" "}
+                  </Link>
                   <img
                     src="/articles/bottom.png"
                     alt=""
@@ -45,7 +47,7 @@ const Articles = () => {
                 </div>
               </Col>
             ))}
-            <button className="btn-blog"> Visita nuestro blog </button>
+            <button className="btn-md-warning"> Visita nuestro blog </button>
           </Row>
         </div>
       </section>

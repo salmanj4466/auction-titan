@@ -148,7 +148,10 @@ const WorldTopRanking = () => {
             </Row>
             <img src="/ranking/bottom.png" alt="" className="bottom-img" />
           </div>
-          <Link href=""> Visita el ranking </Link>
+          <Link href="" className="btn-outline-normal">
+            {" "}
+            Visita el ranking{" "}
+          </Link>
         </div>
       </div>
     </>

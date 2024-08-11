@@ -9,7 +9,9 @@ const Hero = () => {
           <Row>
             <Col xs={24}></Col>
             <div className="hero-btn">
-              <Link href=""> INSCRIBETE </Link>
+              <Link href="" className="btn-lg-warning">
+                INSCRIBETE
+              </Link>
             </div>
           </Row>
         </div>
