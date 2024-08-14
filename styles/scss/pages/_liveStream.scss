@@ -1,0 +1,61 @@
+.live-stream {
+  background-image: url("/liveStream/bg.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0;
+  h1 {
+    @include fontstyle(80px, 400, $secondary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin: 0;
+  }
+  .content {
+    padding-top: 10px;
+    h3 {
+      @include fontstyle(72px, 400, $white);
+      text-transform: uppercase;
+      font-family: $font-staat;
+      letter-spacing: 2.5px;
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+      span {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background-color: #ff005c;
+          border-radius: 50%;
+          right: -50px;
+          transform: translate(-50%, -50%);
+          top: 50%;
+        }
+      }
+    }
+    img {
+      width: 90%;
+      display: flex;
+      margin: auto;
+      margin-top: 10px;
+    }
+    h4 {
+      @include fontstyle(60px, 400, $white);
+      text-transform: uppercase;
+      font-family: $font-staat;
+      letter-spacing: 2.5px;
+      text-align: center;
+      margin: 0;
+      padding: 30px 0 10px 0;
+    }
+    h6 {
+      @include fontstyle(36px, 700, $white);
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

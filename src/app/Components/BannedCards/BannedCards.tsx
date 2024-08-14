@@ -2,8 +2,72 @@
 
 import { Tabs } from "antd";
 import React, { useState } from "react";
+// import { AutoComplete } from "antd";
 
 const BannedCards = () => {
+  const BannedCardsData = [
+    {
+      img: "/banned-cards/bannedCardImg1.png",
+      number: "The Ancient One",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg2.png",
+      number: "Against All Odds",
+      tips: "Sourcery",
+    },
+    {
+      img: "/banned-cards/bannedCardImg1.png",
+      number: "Etched Host Doombringer",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg1.png",
+      number: "Feast or Famine",
+      tips: "Instant",
+    },
+    {
+      img: "/banned-cards/bannedCardImg5.png",
+      number: "The Ancient One",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg6.png",
+      number: "Against All Odds",
+      tips: "Sourcery",
+    },
+    {
+      img: "/banned-cards/bannedCardImg7.png",
+      number: "Etched Host Doombringer",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg8.png",
+      number: "Feast or Famine",
+      tips: "Instant",
+    },
+    {
+      img: "/banned-cards/bannedCardImg9.png",
+      number: "The Ancient One",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg2.png",
+      number: "Against All Odds",
+      tips: "Sourcery",
+    },
+    {
+      img: "/banned-cards/bannedCardImg1.png",
+      number: "Etched Host Doombringer",
+      tips: "Creature",
+    },
+    {
+      img: "/banned-cards/bannedCardImg4.png",
+      number: "Feast or Famine",
+      tips: "Instant",
+    },
+  ];
+
   const items = [
     {
       key: "all",
@@ -63,8 +127,30 @@ const BannedCards = () => {
 
   return (
     <>
-      <div className="banned-cards-tab">
-        <Tabs defaultActiveKey="all" items={items} onChange={handleTabChange} />
+      <div className="banned-cards">
+        <div className="container">
+          <h1>Cartas banneadas</h1>
+          <div className="banned-cards-tab">
+            <Tabs
+              defaultActiveKey="all"
+              items={items}
+              onChange={handleTabChange}
+            />
+          </div>
+          <div className="all-cards">
+            {BannedCardsData.map((el) => (
+              <div className="single-card">
+                <img src={el.img} alt="" />
+                <p>
+                  Nombre: <span>{el.number}</span>
+                </p>
+                <p>
+                  Tipo: <span>{el.tips}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

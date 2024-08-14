@@ -1,0 +1,59 @@
+.past-events {
+  h1 {
+    @include fontstyle(80px, 400, $secondary);
+    font-family: $font-staat;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0 40px 0;
+    margin: 0;
+  }
+
+  .past-event-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+    .single-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 30px;
+      border-radius: 30px;
+      position: relative;
+      .img {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+      }
+      h3 {
+        @include fontstyle(36px, 700, $white);
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      a {
+        padding: 10px 120px;
+        margin-bottom: 10px;
+        background-color: $black;
+      }
+
+      .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 30px;
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom-right-radius: 30px;
+      }
+    }
+  }
+}
