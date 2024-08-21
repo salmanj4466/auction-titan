@@ -25,6 +25,9 @@ footer {
   .social-icon {
     display: flex;
     justify-content: end;
+    @media screen and (max-width: 375px) {
+       justify-content: center;
+    }
     li {
       padding-right: 10px;
       a {

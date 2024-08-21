@@ -24,6 +24,9 @@
       letter-spacing: 2.5px;
       position: relative;
       z-index: 100;
+      @media screen and (max-width: 576px) {
+        font-size: 40px;
+      }
     }
 
     .article-card {
@@ -109,5 +112,33 @@
     //     color: $primary;
     //   }
     // }
+  }
+
+  .ant-space{
+    position: relative !important;
+    z-index: 100 !important;
+    width: 100% !important;
+    @media screen and (max-width: 576px) {
+      .ant-row{
+        margin: 0 !important;
+      }
+    }
+    h3{
+      margin: 0;
+      color: $white;
+      font-size: 18px;
+    }
+    .ant-collapse-expand-icon{
+      color: $white !important;
+    }
+    .ant-col{
+      padding: 0 !important;
+      &:nth-child(2){
+        margin: 20px 0 !important;
+      }
+      .ant-collapse-content {
+        background: none !important;
+      }
+    }
   }
 }

@@ -11,12 +11,33 @@
     justify-content: center;
     li {
       padding: 0 50px;
+      @media screen and (max-width: 1100px) {
+        padding: 0 35px;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0 20px;
+      }
+      @media screen and (max-width: 576px) {
+        padding: 0 8px;
+      }
       h2 {
         @include fontstyle(120px, 400, $white);
         line-height: 130px;
         letter-spacing: 2.5px;
         font-family: "Staatliches", sans-serif;
         margin-bottom: 0;
+        @media screen and (max-width: 968px) {
+          font-size: 82px;
+          line-height: 75px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 60px;
+          line-height: 50px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 36px;
+          line-height: 20px;
+        }
       }
 
       h4 {
@@ -24,6 +45,15 @@
         line-height: 75px;
         letter-spacing: 2.5px;
         font-family: "Staatliches", sans-serif;
+        @media screen and (max-width: 968px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -31,6 +61,9 @@
   p {
     @include fontstyle(18px, 600, $white);
     margin-bottom: 25px;
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+    }
   }
 
   .form-control {

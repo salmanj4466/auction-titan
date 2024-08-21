@@ -82,6 +82,9 @@ body {
     border: 1px solid $primary;
     color: $primary;
   }
+  @media screen and (max-width: 576px) {
+    padding: 10px 40px;
+  }
 }
 
 .btn-outline-shadow {
