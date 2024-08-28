@@ -6,15 +6,25 @@
   background-position: center;
   background-size: cover;
   padding: 40px 0;
+  @media screen and (max-width: 576px) {
+    padding: 40px 0 120px 0;
+  }
   h1 {
     @include fontstyle(80px, 400, $secondary);
     font-family: $font-staat;
     letter-spacing: 2.5px;
     text-align: center;
     margin: 0;
+    @media screen and (max-width: 576px) {
+      font-size: 48px;
+      line-height: 1.1;
+    }
   }
   .content {
     padding-top: 10px;
+    @media screen and (max-width: 576px) {
+      padding-top: 0;
+    }
     h3 {
       @include fontstyle(72px, 400, $white);
       text-transform: uppercase;
@@ -23,6 +33,10 @@
       position: relative;
       width: fit-content;
       margin: 0 auto;
+      @media screen and (max-width: 576px) {
+        font-size: 44px;
+        padding-right: 25px;
+      }
       span {
         &::after {
           content: "";
@@ -34,6 +48,11 @@
           right: -50px;
           transform: translate(-50%, -50%);
           top: 50%;
+          @media screen and (max-width: 576px) {
+            width: 15px;
+            height: 15px;
+            right: -3px;            
+          }
         }
       }
     }
@@ -42,6 +61,10 @@
       display: flex;
       margin: auto;
       margin-top: 10px;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        border-radius: 4px;
+      }
     }
     h4 {
       @include fontstyle(60px, 400, $white);
@@ -51,11 +74,18 @@
       text-align: center;
       margin: 0;
       padding: 30px 0 10px 0;
+      @media screen and (max-width: 576px) {
+        font-size: 30px;
+        color: $primary;
+      }
     }
     h6 {
       @include fontstyle(36px, 700, $white);
       text-align: center;
       margin: 0;
+      @media screen and (max-width: 576px) {
+        font-size: 14px;
+      }
     }
   }
 }

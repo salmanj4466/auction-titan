@@ -1,7 +1,13 @@
+'use client'
+
 import { Col, Row } from "antd";
 import React from "react";
+import { useMediaQuery } from 'react-responsive'
 
 const TopFourPlayer = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
+
   const data = [
     {
       positions: "#1",
@@ -185,7 +191,7 @@ const TopFourPlayer = () => {
     <>
       <div className="top-players">
         <div className="container">
-          <div className="head">
+          {/* <div className="head">
             <h2> Top 4 Último torneo </h2>
             <p>Conoce a nuestros ganadores del torneo del 24 de agosto.</p>
           </div>
@@ -216,37 +222,66 @@ const TopFourPlayer = () => {
                 </div>
               </Col>
             ))}
-          </Row>
+          </Row> */}
 
           {/* general-ranking  */}
 
           <div className="general-ranking">
             <h1>RANKING GENERAL</h1>
 
-            <div className="leaderboard">
-              <table>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Jugador</th>
-                    <th>Ubicación</th>
-                    <th>Puntos</th>
-                    <th>Nivel</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {tableData.map((item) => (
-                    <tr key={item.id}>
-                      <td>{item.id}</td>
-                      <td>{item.name}</td>
-                      <td>{item.location}</td>
-                      <td>{item.points}</td>
-                      <td>{item.level}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+
+            {isMobile ? (
+              <>
+                <div className="mobile-leaderboard">
+                  <table>
+                    <tbody>
+                      {tableData.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.id}</td>
+                          <td>
+                            <div className="top">
+                              <p>Erik Garrido</p>
+                              <span>Puebla</span>
+                            </div>
+                            <div className="bottom">
+                              <p>Nivel:Leyenda</p>
+                              <p>3,500 puntos</p>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="leaderboard">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Jugador</th>
+                        <th>Ubicación</th>
+                        <th>Puntos</th>
+                        <th>Nivel</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tableData.map((item) => (
+                        <tr key={item.id}>
+                          <td>{item.id}</td>
+                          <td>{item.name}</td>
+                          <td>{item.location}</td>
+                          <td>{item.points}</td>
+                          <td>{item.level}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

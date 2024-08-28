@@ -34,14 +34,14 @@ const WorldTopRanking = () => {
         <>
           <div className="top-ranking-mobile">
             <h2> Top mundial </h2>
-            <Carousel responsive={responsive} showDots={true}>
+            <Carousel responsive={responsive} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} arrows={false}>
               <div className="mob-profile">
                 <div className="serial-no">
                   <h2>#</h2>
                   <h2>1</h2>
                 </div>
                 <div className="img-box">
-                  <img src="/ranking/ranking1.png" alt="" />
+                  <img src="/ranking/mob-rank-1.png" alt="" />
                 </div>
                 <div className="person-detail">
                   <h3>Juan perez Ozuna</h3>
@@ -80,7 +80,7 @@ const WorldTopRanking = () => {
                   <h2>2</h2>
                 </div>
                 <div className="img-box">
-                  <img src="/ranking/ranking2.png" alt="" />
+                  <img src="/ranking/mob-rank-2.png" alt="" />
                 </div>
                 <div className="person-detail">
                   <h3>aRANZA pEREZ sOSA</h3>
@@ -119,7 +119,7 @@ const WorldTopRanking = () => {
                   <h2>3</h2>
                 </div>
                 <div className="img-box">
-                  <img src="/ranking/ranking3.png" alt="" />
+                  <img src="/ranking/mob-rank-3.png" alt="" />
                 </div>
                 <div className="person-detail">
                   <h3>Nombre</h3>
@@ -158,7 +158,7 @@ const WorldTopRanking = () => {
                   <h2>4</h2>
                 </div>
                 <div className="img-box">
-                  <img src="/ranking/ranking4.png" alt="" />
+                  <img src="/ranking/mob-rank-4.png" alt="" />
                 </div>
                 <div className="person-detail">
                   <h3>Nombre</h3>

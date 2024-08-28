@@ -1,6 +1,6 @@
 import React from "react";
-import BlogDetail from "../Components/BlogLecture/BlogDetail";
-import Recomendation from "../Components/BlogLecture/Recomendation";
+import BlogDetail from "../Components/blogLecture/BlogDetail";
+import Recomendation from "../Components/blogLecture/Recomendation";
 
 const BlogLecture = () => {
   return (

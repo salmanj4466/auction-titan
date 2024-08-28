@@ -3,8 +3,12 @@
 import { Tabs } from "antd";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
 
 const BlogsCategory = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
+
   const CategoryData = [
     {
       key: "1",
@@ -15,6 +19,10 @@ const BlogsCategory = () => {
         style: {
           color: "#04DDE5",
         },
+        mobStyle: {
+          backgroundColor: '#04DDE5',
+          color: '#fff'
+        }
       },
     },
     {
@@ -26,6 +34,10 @@ const BlogsCategory = () => {
         style: {
           color: "#4E169F",
         },
+        mobStyle: {
+          backgroundColor: '#4E169F',
+          color: '#fff'
+        }
       },
     },
     {
@@ -37,6 +49,10 @@ const BlogsCategory = () => {
         style: {
           color: "#04DDE5",
         },
+        mobStyle: {
+          backgroundColor: '#04DDE5',
+          color: '#fff'
+        }
       },
     },
     {
@@ -48,6 +64,10 @@ const BlogsCategory = () => {
         style: {
           color: "#DF54FF",
         },
+        mobStyle: {
+          backgroundColor: '#DF54FF',
+          color: '#fff'
+        }
       },
     },
     {
@@ -59,6 +79,10 @@ const BlogsCategory = () => {
         style: {
           color: "#DF54FF",
         },
+        mobStyle: {
+          backgroundColor: '#DF54FF',
+          color: '#fff'
+        }
       },
     },
     {
@@ -70,6 +94,10 @@ const BlogsCategory = () => {
         style: {
           color: "#04DDE5",
         },
+        mobStyle: {
+          backgroundColor: '#04DDE5',
+          color: '#fff'
+        }
       },
     },
     {
@@ -81,6 +109,10 @@ const BlogsCategory = () => {
         style: {
           color: "#0029C2",
         },
+        mobStyle: {
+          backgroundColor: '#0029C2',
+          color: '#fff'
+        }
       },
     },
     {
@@ -92,6 +124,10 @@ const BlogsCategory = () => {
         style: {
           color: "#4E169F",
         },
+        mobStyle: {
+          backgroundColor: '#4E169F',
+          color: '#fff'
+        }
       },
     },
   ];
@@ -125,16 +161,11 @@ const BlogsCategory = () => {
     setActiveKey(key);
   };
 
+
   const filteredCards =
     activeKey === "all"
       ? CategoryData
       : CategoryData.filter((card) => card.key === activeKey);
-
-  console.log(
-    window.location.pathname === "/blogLecture"
-      ? "blogLectureCategoryClass"
-      : null
-  );
 
   return (
     <>
@@ -147,23 +178,48 @@ const BlogsCategory = () => {
           }
         >
           <Tabs
-            defaultActiveKey="all"
-            items={items}
+            activeKey={activeKey}
             onChange={handleTabChange}
+            items={items}
+            style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}
           />
         </div>
-        <div className="category-cards">
-          {filteredCards.map((elm) => (
-            <div className="category">
-              <img src={elm.img} alt="" />
-              <div className="content">
-                <span style={elm.color.style}>{elm.tag}</span>
-                <h4>{elm.title}</h4>
-                <Link href=""> Leer más </Link>
-              </div>
+
+        {isMobile ? (
+          <>
+            <div className="category-mobile-cards">
+              {filteredCards.map((elm) => (
+                <div className="category-mbile">
+                  <img src={elm.img} alt="" />
+                  <div className="content">
+                    <span style={elm.color.mobStyle}>{elm.tag}</span>
+                    <h4>Main title, Main title, Main title, Main Title, Main title....</h4>
+                    <Link href=""> Leer más </Link>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <>
+            <div className="category-cards">
+              {filteredCards.map((elm) => (
+                <div className="category">
+                  <img src={elm.img} alt="" />
+                  <div className="content">
+                    <span style={elm.color.style}>{elm.tag}</span>
+                    <h4>{elm.title}</h4>
+                    <Link href=""> Leer más </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+
+
+
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import AllTournamnets from "../Components/AllTournaments/AllTournamnets";
-import RegistrationDates from "../Components/Events/RegistrationDates";
 import OtherEvents from "../Components/AllTournaments/OtherEvents";
+import RegistrationDates from "../Components/events/RegistrationDates";
 
 const AllTournaments = () => {
   return (

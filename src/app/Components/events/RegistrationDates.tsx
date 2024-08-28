@@ -9,7 +9,7 @@ const RegistrationDates = () => {
             <h2>
               Fecha de apertura de inscripción <br /> <span>2 de julio</span>
             </h2>
-            <h2>
+            <h2 className="mt-3 mt-lg-0">
               Fecha de cierre de inscripción
               <br /> <span>14 de julio</span>
             </h2>
@@ -17,10 +17,10 @@ const RegistrationDates = () => {
               Fecha del próximo evento <br />
               <span>30 de julio</span>
             </h1>
-            <div className="btns">
-              <button className="left-btn">Cartas Banneadas</button>
-              <button className="right-btn">INSCRIBETE</button>
-            </div>
+          </div>
+          <div className="btns">
+            <button className="left-btn">Cartas Banneadas</button>
+            <button className="right-btn">INSCRIBETE</button>
           </div>
         </div>
       </div>

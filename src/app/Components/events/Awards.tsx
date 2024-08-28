@@ -1,7 +1,13 @@
+'use client'
+
 import Link from "next/link";
 import React from "react";
+import { useMediaQuery } from 'react-responsive'
 
 const Awards = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
+
   const CategoryData = [
     {
       img: "/events/event1.png",
@@ -11,6 +17,9 @@ const Awards = () => {
         style: {
           color: "#04DDE5",
         },
+        mobStyle: {
+          backgroundColor: '#04DDE5'
+        }
       },
     },
     {
@@ -21,6 +30,9 @@ const Awards = () => {
         style: {
           color: "#4E169F",
         },
+        mobStyle: {
+          backgroundColor: '#4E169F'
+        }
       },
     },
     {
@@ -31,6 +43,9 @@ const Awards = () => {
         style: {
           color: "#ffb202",
         },
+        mobStyle: {
+          backgroundColor: '#ffb202'
+        }
       },
     },
     {
@@ -41,6 +56,9 @@ const Awards = () => {
         style: {
           color: "#DF54FF",
         },
+        mobStyle: {
+          backgroundColor: '#DF54FF'
+        }
       },
     },
   ];
@@ -49,18 +67,38 @@ const Awards = () => {
     <>
       <div className="container events">
         <h2> conoce nuestros premios </h2>
-        <div className="category-cards">
-          {CategoryData.map((elm) => (
-            <div className="category">
-              <img src={elm.img} alt="" />
-              <div className="content">
-                <span style={elm.color.style}>{elm.tag}</span>
-                <h4>{elm.title}</h4>
-                <Link href=""> Saber más </Link>
-              </div>
+
+        {isMobile ? (
+          <>
+            <div className="category-mobile-cards">
+              {CategoryData.map((elm) => (
+                <div className="category-mobile">
+                  <img src={elm.img} alt="" />
+                  <div className="content">
+                    <span style={elm.color.mobStyle}>{elm.tag}</span>
+                    <h4>{elm.title}</h4>
+                    <Link href=""> Saber más </Link>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <>
+            <div className="category-cards">
+              {CategoryData.map((elm) => (
+                <div className="category">
+                  <img src={elm.img} alt="" />
+                  <div className="content">
+                    <span style={elm.color.style}>{elm.tag}</span>
+                    <h4>{elm.title}</h4>
+                    <Link href=""> Saber más </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </>
   );

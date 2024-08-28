@@ -227,6 +227,11 @@
 //for mobile
 
 .top-ranking-mobile {
+  background-color: #363131;
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px 0px 36px 0px;
   h2 {
     @include fontstyle(52px, 400, $primary);
     text-align: center;
@@ -248,8 +253,10 @@
     position: relative;
     z-index: 10;
     @media screen and (max-width: 576px) {
-      width: 80%;
+      width: 90%;
       padding-bottom: 10px;
+      border-radius: 15px;
+      margin-top: 10px;
     }
 
     .serial-no {
@@ -266,8 +273,12 @@
       justify-content: center;
       align-items: center;
       @media screen and (max-width: 576px) {
-        top: -7px;
-        left: -7px;
+        top: 10px;
+        left: 15px;
+      }
+      @media screen and (max-width: 375px) {
+        top: 8px;
+        left: 8px;
       }
 
       h2 {
@@ -285,6 +296,19 @@
       img {
         width: 100%;
         height: 100%;
+        border-radius: 15px;
+      }
+
+      &::after{
+        content: '';
+        position: absolute;
+        border: 4px solid $primary;
+        width: 90%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 15px;
       }
     }
 
@@ -367,8 +391,23 @@
     padding: 10px 30px;
     font-size: 20px;
     margin-bottom: 70px;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
   }
   .react-multi-carousel-track {
     margin-bottom: 70px !important;
+  }
+  .react-multi-carousel-dot-list{
+    gap: 30px !important;
+  }
+  .react-multi-carousel-dot button{
+    border: none !important;
+    background-color: #938F99 !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .react-multi-carousel-dot--active button{
+    background-color: $primary !important;
   }
 }

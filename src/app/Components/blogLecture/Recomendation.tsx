@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import BlogsCategory from "../Blog/BlogsCategory";
+import BlogsCategory from "../blog/BlogsCategory";
 
 const Recomendation = () => {
   return (
