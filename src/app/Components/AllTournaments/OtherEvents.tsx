@@ -4,9 +4,12 @@ import Link from "next/link";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Slider from "react-slick";
+import { useMediaQuery } from 'react-responsive'
 
 const OtherEvents = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
+
   const CategoryData = [
     {
       key: "1",
@@ -74,29 +77,66 @@ const OtherEvents = () => {
     <>
       <div className="other-events">
         <h2> Otros eventos </h2>
-        <div className="events-cards">
-          <Carousel
-            responsive={responsive}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            arrows={false}
-          >
-            {CategoryData.map((elm) => (
-              <div className="category">
-                <div className="main-content">
-                  <img src={elm.img} alt="" />
-                  <div className="content">
-                    <p>{elm.tag}</p>
-                    <Link href=""> Leer más </Link>
+
+        {isMobile ? (
+          <>
+            <div className="blog-banner-mobile">
+              <Carousel responsive={responsive}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                arrows={false}
+                itemClass="carousel-item-padding"
+              >
+                <div className="img">
+                  <img src="/blog/blog-banner-mobile.png" alt="Banner 1" />
+                  <div className="img-content">
+                    <p>Main title, main title, main title, main ...</p>
+                    <Link href=''>
+                      Ver mas...
+                    </Link>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Carousel>
-        </div>
+                <div className="img">
+                  <img src="/blog/blog-banner-mobile.png" alt="Banner 2" />
+                  <div className="img-content">
+                    <p>Main title, main title, main title, main ...</p>
+                    <Link href=''>
+                      Ver mas...
+                    </Link>
+                  </div>
+                </div>
+              </Carousel>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="events-cards">
+              <Carousel
+                responsive={responsive}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                arrows={false}
+              >
+                {CategoryData.map((elm) => (
+                  <div className="category">
+                    <div className="main-content">
+                      <img src={elm.img} alt="" />
+                      <div className="content">
+                        <p>{elm.tag}</p>
+                        <Link href=""> Leer más </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
 };
+
 
 export default OtherEvents;

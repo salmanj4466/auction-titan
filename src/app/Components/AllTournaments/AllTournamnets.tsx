@@ -1,7 +1,14 @@
+'use client'
+
 import { Col, Row } from "antd";
 import React from "react";
+import { useMediaQuery } from 'react-responsive'
 
 const AllTournamnets = () => {
+
+  const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
+
   return (
     <>
       <div className="all-tournaments">
@@ -10,25 +17,54 @@ const AllTournamnets = () => {
           <h2 className="text-center m-auto">
             EV VIVO <span></span>
           </h2>
-          <Row gutter={[24, 16]} className="mt-4">
-            <Col span={12}>
-              <div className="torneo-de">
-                <h3>torneo de 12 de agosto</h3>
-                <p>
-                  ¡Ve el último torneo en vivo y directo!
-                  <br />
-                  Sin perderte ningún momento.
-                </p>
+
+          {isMobile ? (
+            <>
+              <div className="mobile-view">
+              <Row gutter={[24, 16]} className="mt-4">
+                <Col span={isTablet ? 24 : 12}>
+                  <img
+                    src="/live-tournments/Video en vivo.png"
+                    alt=""
+                    className="w-100"
+                  />
+                </Col>
+                <Col span={isTablet ? 24 : 12}>
+                  <div className="torneo-de">
+                    <h3>torneo de 12 de agosto</h3>
+                    <p>
+                      ¡Ve el último torneo en vivo y directo!
+                      <br />
+                      Sin perderte ningún momento.
+                    </p>
+                  </div>
+                </Col>
+              </Row>
               </div>
-            </Col>
-            <Col span={12}>
-              <img
-                src="/live-tournments/Video en vivo.png"
-                alt=""
-                className="w-100"
-              />
-            </Col>
-          </Row>
+            </>
+          ) : (
+            <>
+              <Row gutter={[24, 16]} className="mt-4">
+                <Col span={isTablet ? 24 : 12}>
+                  <div className="torneo-de">
+                    <h3>torneo de 12 de agosto</h3>
+                    <p>
+                      ¡Ve el último torneo en vivo y directo!
+                      <br />
+                      Sin perderte ningún momento.
+                    </p>
+                  </div>
+                </Col>
+                <Col span={isTablet ? 24 : 12}>
+                  <img
+                    src="/live-tournments/Video en vivo.png"
+                    alt=""
+                    className="w-100"
+                  />
+                </Col>
+              </Row>
+            </>
+          )}
           <p className="sign-up"> ¿Quieres inscribirte? </p>
         </div>
       </div>
