@@ -4,8 +4,11 @@ import { Col, Row, Tabs } from "antd";
 import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useMediaQuery } from "react-responsive";
 
 const BanCardSheet = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   const BannedCardsData = [
     {
       img: "/banned-cards/bannedCardImg1.png",
@@ -153,18 +156,19 @@ const BanCardSheet = () => {
           <h1>Cartas banneadas</h1>
           <div className="banned-cards-tab">
             <Tabs
-              defaultActiveKey="all"
-              items={items}
+              activeKey={activeKey}
               onChange={handleTabChange}
+              items={items}
+              style={{ overflowX: "auto", whiteSpace: "nowrap" }}
             />
           </div>
 
           <div className="details">
             <Row gutter={[40, 16]}>
-              <Col span={8}>
+              <Col span={isMobile ? 24 : 8}>
                 <img src="/banned-cards/bannedCardImg3.png" alt="" />
               </Col>
-              <Col span={16}>
+              <Col span={isMobile ? 24 : 16}>
                 <div className="content">
                   <div className="info">
                     <p>Nombre:</p>
@@ -208,7 +212,13 @@ const BanCardSheet = () => {
           <h2>Otras tarjetas banneadas</h2>
 
           <div className="all-ban-cards">
-            <Carousel responsive={responsive}>
+            <Carousel
+              responsive={responsive}
+              autoPlay={true}
+              autoPlaySpeed={3000}
+              infinite={true}
+              arrows={false}
+            >
               {BannedCardsData.map((el) => (
                 <div className="single-card">
                   <img src={el.img} alt="" />

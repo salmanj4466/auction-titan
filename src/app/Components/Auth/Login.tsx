@@ -2,8 +2,11 @@
 import { Checkbox, Col, Form, Input, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 const LoginComponent = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 968px)" });
+
   return (
     <>
       <section className="auth-section">
@@ -12,7 +15,7 @@ const LoginComponent = () => {
             <Col md={22}>
               <div className="bg-dark rounded-xl">
                 <Row className="align-items-center">
-                  <Col md={12}>
+                  <Col md={12} className="d-none d-lg-block">
                     <Image
                       className="img-fluid auth-img"
                       width={605}
@@ -21,7 +24,10 @@ const LoginComponent = () => {
                       alt="login"
                     />
                   </Col>
-                  <Col md={12} className="px-5">
+                  <Col
+                    md={isMobile ? 24 : 12}
+                    className="px-5 px-md-3 py-5 py-lg-0"
+                  >
                     <h3 className="text-center">hola de nuevo</h3>
                     <p className="text-center mb-5">Ingresa tus detalles</p>
                     <form>

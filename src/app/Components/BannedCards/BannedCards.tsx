@@ -132,9 +132,10 @@ const BannedCards = () => {
           <h1>Cartas banneadas</h1>
           <div className="banned-cards-tab">
             <Tabs
-              defaultActiveKey="all"
-              items={items}
+              activeKey={activeKey}
               onChange={handleTabChange}
+              items={items}
+              style={{ overflowX: "auto", whiteSpace: "nowrap" }}
             />
           </div>
           <div className="all-cards">

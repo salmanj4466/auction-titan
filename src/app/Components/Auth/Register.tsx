@@ -2,8 +2,10 @@
 import { Checkbox, Col, Form, Input, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 const RgisterComponent = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 968px)" });
   return (
     <>
       <section className="auth-section">
@@ -12,7 +14,7 @@ const RgisterComponent = () => {
             <Col md={22}>
               <div className="bg-dark rounded-xl">
                 <Row className="align-items-center">
-                  <Col md={12} className="px-5">
+                  <Col md={isMobile ? 24 : 12} className="px-5 py-5">
                     <h3 className="text-center mb-5">Registra tus datos</h3>
                     <form>
                       <div className="form-group mb-4">
@@ -85,7 +87,7 @@ const RgisterComponent = () => {
                       Continua con Apple
                     </button>
                   </Col>
-                  <Col md={12}>
+                  <Col md={12} className="d-none d-lg-block">
                     <Image
                       className="img-fluid auth-img"
                       width={605}
