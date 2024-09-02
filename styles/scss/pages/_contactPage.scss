@@ -28,6 +28,19 @@
     max-width: 80%;
     margin: auto !important;
     padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
     .content {
       background: rgb(28, 28, 28);
       background: linear-gradient(
@@ -38,6 +51,7 @@
       border-radius: 25px;
       padding: 30px 20px 0 20px;
       height: 363px;
+      min-width: 100%;
       .icon {
         width: 70px;
         height: 70px;

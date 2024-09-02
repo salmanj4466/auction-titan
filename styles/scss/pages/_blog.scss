@@ -165,8 +165,15 @@
   border: none !important;
 }
 
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: red !important;
+.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 !important;
+}
+
+.ant-tabs .ant-tabs-tab-btn {
+  padding: 8px 20px;
+  &:hover {
+    color: $primary !important;
+  }
 }
 
 .ant-tabs-nav .ant-tabs-ink-bar {
