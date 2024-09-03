@@ -18,13 +18,19 @@ header {
 
   @include devices(md) {
     position: fixed;
-    background: $white;
+    // background: $white;
     width: 100%;
     z-index: 999;
   }
   .navbar-toggler {
     color: $primary;
     padding: 0;
+    position: absolute;
+    @media screen and (max-width: 992px) {
+      img {
+        width: 70px;
+      }
+    }
 
     &:hover {
       outline: none;
@@ -52,14 +58,32 @@ header {
   }
 
   .navbar-brand {
+    @media screen and (max-width: 992px) {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+    }
     img {
       object-fit: contain;
     }
   }
 
-  ul {
+  .navbar-nav {
     margin: 0;
     align-items: center;
+    @media screen and (max-width: 992px) {
+      position: absolute;
+      background-color: #2a2634;
+      height: 90vh;
+      top: 104px;
+      left: 0;
+      width: 300px;
+      .nav-item {
+        padding: 10px 0;
+        margin-right: auto;
+        margin-left: 20px;
+      }
+    }
 
     li {
       padding: 0 15px;
@@ -77,6 +101,7 @@ header {
         letter-spacing: 0.5px;
         font-family: "Barlow", sans-serif !important;
         text-transform: capitalize;
+        color: $primary !important;
 
         &:hover {
           color: $secondary;
@@ -85,6 +110,10 @@ header {
         @include devices(sm) {
           font-size: 16px;
         }
+      }
+
+      a.show {
+        color: $secondary !important;
       }
 
       .hero-btn {
@@ -98,7 +127,7 @@ header {
       .hero-btn2 {
         background-color: transparent;
         border: 1px solid #938f99;
-        padding: 8px 30px;
+        padding: 8px 20px !important;
         border-radius: 30px;
         font-size: 16px;
         font-weight: 500;
@@ -107,6 +136,50 @@ header {
       .bars {
         width: 80px !important;
         cursor: pointer;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: #2a2634;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      padding: 3px 0 !important;
+      margin-top: 32px !important;
+      border: none !important;
+      .dropdown-item {
+        color: $white !important;
+        padding: 10px 0 !important;
+        width: 180px;
+        text-align: center;
+        font-size: 15px;
+        padding: 12px 0 !important;
+        &:hover {
+          color: $primary !important;
+          background: none;
+        }
+      }
+    }
+
+    .resister-btn {
+      .dropdown-menu {
+        background-color: #2a2634;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        padding: 3px 0 !important;
+        margin-top: 31px !important;
+        border: none !important;
+        .dropdown-item {
+          color: $white !important;
+          padding: 10px 0 !important;
+          width: 200px;
+          text-align: center;
+          font-size: 15px;
+          padding: 12px 0 !important;
+          &:hover {
+            color: $primary !important;
+            background: none;
+          }
+        }
       }
     }
   }

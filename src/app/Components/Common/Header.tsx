@@ -18,7 +18,7 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <img src="bars.png" alt="" className="bars" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -45,34 +45,105 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Action
+                      Próximo evento
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/past-events">
+                      Eventos anteriores
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Another action
+                      Todos los torneos
                     </a>
                   </li>
-
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
+                    <a className="dropdown-item" href="/live-stream">
+                      Live Stream torneo
                     </a>
                   </li>
                 </ul>
               </li>
+
               <li className="nav-item">
-                <a className="nav-link" aria-disabled="true">
+                <a
+                  className="nav-link"
+                  aria-disabled="true"
+                  href="/sponsor-page"
+                >
                   Patrocinadores
                 </a>
               </li>
               <li className="nav-item">
-                <button className="hero-btn"> Registro del torneo </button>
+                <a href="/registration-page">
+                  <button className="hero-btn">Registro del torneo</button>
+                </a>
               </li>
-              <li className="nav-item">
-                <button className="hero-btn2"> Reglas de la liga </button>
+              <li className="nav-item dropdown resister-btn">
+                <a
+                  className="nav-link dropdown-toggle hero-btn2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Reglas de la liga
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="/page-event-rules">
+                      Reglas generales
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/banned-cards">
+                      Cartas banneadas
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/league-protocol">
+                      Protocolo de la liga
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/score-page">
+                      Lista de puntos
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/player-profile">
+                      Nuevo usuario
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/login">
+                      Inicio de sesión
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/profile-page">
+                      Perfil
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/terms-and-conditions">
+                      Términos y Condiciones
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/contact-us">
+                      Contacto
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/privacy-notice-page">
+                      Aviso de privacidad
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li className="nav-item">
+              <li className="nav-item d-none d-lg-block">
                 <img src="bars.png" alt="" className="bars" />
               </li>
             </ul>
