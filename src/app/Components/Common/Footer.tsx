@@ -128,7 +128,7 @@ const Footer = () => {
                   </ul>
                 </Col>
                 <Col span={isTabletOrMobile ? 24 : 8}>
-                  <h4 className="mt-5">Empresa</h4>
+                  <h4 className="mt-4">Empresa</h4>
                   <ul>
                     <li>
                       <Link href="/privacy-notice-page">
@@ -141,7 +141,7 @@ const Footer = () => {
                   </ul>
                 </Col>
                 <Col span={isTabletOrMobile ? 24 : 8}>
-                  <h4 className="mt-5">TORNEO </h4>
+                  <h4 className="mt-4">TORNEO </h4>
                   <ul>
                     <li>
                       <Link href="/events">Eventos próximos</Link>

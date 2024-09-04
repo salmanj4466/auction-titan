@@ -2,7 +2,12 @@
 
 import { Tabs } from "antd";
 import React, { useState } from "react";
-// import { AutoComplete } from "antd";
+import { AutoComplete } from "antd";
+import { IoSearchOutline } from "react-icons/io5";
+
+const mockVal = (str: any, repeat = 1) => ({
+  value: str.repeat(repeat),
+});
 
 const BannedCards = () => {
   const BannedCardsData = [
@@ -125,6 +130,21 @@ const BannedCards = () => {
     setActiveKey(key);
   };
 
+  const [value, setValue] = useState<string>("");
+  const [options, setOptions] = useState<{ value: string }[]>([]);
+
+  const getPanelValue = (searchText: string) =>
+    !searchText
+      ? []
+      : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
+
+  const onSelect = (data: string) => {
+    console.log("onSelect", data);
+  };
+
+  const onChange = (data: string) => {
+    setValue(data);
+  };
   return (
     <>
       <div className="banned-cards">
@@ -138,6 +158,22 @@ const BannedCards = () => {
               style={{ overflowX: "auto", whiteSpace: "nowrap" }}
             />
           </div>
+
+          <div className="search-field">
+            <IoSearchOutline className="search-icon" />
+            <AutoComplete
+              value={value}
+              options={options}
+              style={{
+                width: "100%",
+              }}
+              onSelect={onSelect}
+              onSearch={(text) => setOptions(getPanelValue(text))}
+              onChange={onChange}
+              placeholder="Búsqueda"
+            />
+          </div>
+
           <div className="all-cards">
             {BannedCardsData.map((el) => (
               <div className="single-card">

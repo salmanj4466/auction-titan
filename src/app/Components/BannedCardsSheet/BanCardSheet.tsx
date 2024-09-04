@@ -5,6 +5,12 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useMediaQuery } from "react-responsive";
+import { AutoComplete } from "antd";
+import { IoSearchOutline } from "react-icons/io5";
+
+const mockVal = (str: any, repeat = 1) => ({
+  value: str.repeat(repeat),
+});
 
 const BanCardSheet = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -149,6 +155,22 @@ const BanCardSheet = () => {
     setActiveKey(key);
   };
 
+  const [value, setValue] = useState<string>("");
+  const [options, setOptions] = useState<{ value: string }[]>([]);
+
+  const getPanelValue = (searchText: string) =>
+    !searchText
+      ? []
+      : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
+
+  const onSelect = (data: string) => {
+    console.log("onSelect", data);
+  };
+
+  const onChange = (data: string) => {
+    setValue(data);
+  };
+
   return (
     <>
       <div className="banned-cards-sheet">
@@ -160,6 +182,21 @@ const BanCardSheet = () => {
               onChange={handleTabChange}
               items={items}
               style={{ overflowX: "auto", whiteSpace: "nowrap" }}
+            />
+          </div>
+
+          <div className="search-field">
+            <IoSearchOutline className="search-icon" />
+            <AutoComplete
+              value={value}
+              options={options}
+              style={{
+                width: "100%",
+              }}
+              onSelect={onSelect}
+              onSearch={(text) => setOptions(getPanelValue(text))}
+              onChange={onChange}
+              placeholder="Búsqueda"
             />
           </div>
 

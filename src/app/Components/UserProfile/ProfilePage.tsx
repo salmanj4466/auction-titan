@@ -24,7 +24,7 @@ const ProfilePage = () => {
               <Col span={6}>
                 <div className="box">
                   <div className="img">
-                    <img src="/profile-imgs/profile.png" alt="" />
+                    <img src="/profile-imgs/placeholder.png" alt="" />
                   </div>
                 </div>
                 <div className="selected-imgs">
