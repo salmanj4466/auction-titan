@@ -6,8 +6,8 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <Link className="navbar-brand" href="#">
-            <Image width={79} height={79} src="/logo.svg" alt="logo" />
+          <Link className="navbar-brand" href="/">
+            <img width={79} height={79} src="/logo.svg" alt="logo" />
           </Link>
           <button
             className="navbar-toggler"
