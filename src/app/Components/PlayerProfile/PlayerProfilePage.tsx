@@ -51,7 +51,14 @@ const PlayerProfilePage = () => {
                     </div>
                     <div className="box">
                       <p>Torneos ganados</p>
-                      <h2>Maestro</h2>
+                      <img src="/ranking/badge.png" alt="" />
+                      <div className="stars">
+                        <img src="/ranking/star.png" alt="" />
+                        <img src="/ranking/star.png" alt="" />
+                        <img src="/ranking/star.png" alt="" />
+                        <img src="/ranking/star.png" alt="" />
+                        <img src="/ranking/star.png" alt="" />
+                      </div>
                       <div className="bar"></div>
                     </div>
                   </div>

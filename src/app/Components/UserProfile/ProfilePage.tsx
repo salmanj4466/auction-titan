@@ -2,7 +2,7 @@
 
 import { Col, Row } from "antd";
 import React, { useRef } from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 const ProfilePage = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -25,6 +25,7 @@ const ProfilePage = () => {
                 <div className="box">
                   <div className="img">
                     <img src="/profile-imgs/placeholder.png" alt="" />
+                    <FaPlus className="plus-icon" />
                   </div>
                 </div>
                 <div className="selected-imgs">

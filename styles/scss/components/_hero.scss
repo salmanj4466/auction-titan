@@ -3,10 +3,13 @@
   background-image: url("/hero-bg.png");
   background-size: cover;
   height: 1020px;
+  background-position: center;
   position: relative;
 
   @include devices(md) {
     height: 850px;
+    background-image: url("/hero-mbl-bg.png");
+    background-position: center;
   }
 
   .hero-btn {

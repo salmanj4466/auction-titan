@@ -3,6 +3,7 @@
 import React from "react";
 import { Select } from "antd";
 import Link from "next/link";
+import { LuUpload } from "react-icons/lu";
 
 const ReagistrationPage = () => {
   const handleChange = (value: any) => {
@@ -41,6 +42,26 @@ const ReagistrationPage = () => {
               className="form-control"
               placeholder="Contraseña"
             />
+            <div className="upload">
+              <p>Sube tu foto de perfil</p>
+              <div className="upload-btn" style={{ position: "relative" }}>
+                <input
+                  type="file"
+                  id="file-input"
+                  style={{
+                    opacity: 0,
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    cursor: "pointer",
+                  }}
+                />
+                <LuUpload
+                  className="upload-icon"
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="select-boxes">
