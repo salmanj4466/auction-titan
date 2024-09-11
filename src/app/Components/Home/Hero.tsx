@@ -9,7 +9,7 @@ const Hero = () => {
           <Row>
             <Col xs={24}></Col>
             <div className="hero-btn">
-              <Link href="" className="btn-lg-warning">
+              <Link href="/registration-page" className="btn-lg-warning">
                 INSCRIBETE
               </Link>
             </div>

@@ -34,159 +34,254 @@ const WorldTopRanking = () => {
         <>
           <div className="top-ranking-mobile">
             <h2> Top mundial </h2>
-            <Carousel responsive={responsive} showDots={true} infinite={true} autoPlay={true} autoPlaySpeed={3000} arrows={false}>
-              <div className="mob-profile">
-                <div className="serial-no">
-                  <h2>#</h2>
-                  <h2>1</h2>
-                </div>
-                <div className="img-box">
-                  <img src="/ranking/mob-rank-1.png" alt="" />
-                </div>
-                <div className="person-detail">
-                  <h3>Juan perez Ozuna</h3>
-                  <div className="profile-details">
-                    <div className="left">
-                      <p>Cholula</p>
-                      <h5>Leyenda</h5>
-                      <h6>3500 puntos</h6>
-                    </div>
-                    <div className="right">
-                      <img
-                        src="/ranking/badge.png"
-                        alt=""
-                        className="badge-img"
-                      />
-                      <div className="stars">
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
+            <Carousel
+              responsive={responsive}
+              showDots={true}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={3000}
+              arrows={false}
+            >
+              <Link href="/player-profile">
+                <div className="mob-profile">
+                  <div className="serial-no">
+                    <h2>#</h2>
+                    <h2>1</h2>
+                  </div>
+                  <div className="img-box">
+                    <img src="/ranking/mob-rank-1.png" alt="" />
+                  </div>
+                  <div className="person-detail">
+                    <h3>Juan perez Ozuna</h3>
+                    <div className="profile-details">
+                      <div className="left">
+                        <p>Cholula</p>
+                        <h5>Leyenda</h5>
+                        <h6>3500 puntos</h6>
+                      </div>
+                      <div className="right">
+                        <img
+                          src="/ranking/badge.png"
+                          alt=""
+                          className="badge-img"
+                        />
+                        <div className="stars">
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="mob-profile"
-                style={{ backgroundColor: "#df54ff" }}
-              >
+              </Link>
+              <Link href="/player-profile">
                 <div
-                  className="serial-no"
+                  className="mob-profile"
                   style={{ backgroundColor: "#df54ff" }}
                 >
-                  <h2>#</h2>
-                  <h2>2</h2>
-                </div>
-                <div className="img-box">
-                  <img src="/ranking/mob-rank-2.png" alt="" />
-                </div>
-                <div className="person-detail">
-                  <h3>aRANZA pEREZ sOSA</h3>
-                  <div className="profile-details">
-                    <div className="left">
-                      <p>CDMX</p>
-                      <h5>Pro Player</h5>
-                      <h6>3488 puntos</h6>
-                    </div>
-                    <div className="right">
-                      <img
-                        src="/ranking/badge.png"
-                        alt=""
-                        className="badge-img"
-                      />
-                      <div className="stars">
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
+                  <div
+                    className="serial-no"
+                    style={{ backgroundColor: "#df54ff" }}
+                  >
+                    <h2>#</h2>
+                    <h2>2</h2>
+                  </div>
+                  <div className="img-box">
+                    <img src="/ranking/mob-rank-2.png" alt="" />
+                  </div>
+                  <div className="person-detail">
+                    <h3>aRANZA pEREZ sOSA</h3>
+                    <div className="profile-details">
+                      <div className="left">
+                        <p>CDMX</p>
+                        <h5>Pro Player</h5>
+                        <h6>3488 puntos</h6>
+                      </div>
+                      <div className="right">
+                        <img
+                          src="/ranking/badge.png"
+                          alt=""
+                          className="badge-img"
+                        />
+                        <div className="stars">
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="mob-profile"
-                style={{ backgroundColor: "#4e169f" }}
-              >
+              </Link>
+              <Link href="/player-profile">
                 <div
-                  className="serial-no"
+                  className="mob-profile"
                   style={{ backgroundColor: "#4e169f" }}
                 >
-                  <h2>#</h2>
-                  <h2>3</h2>
-                </div>
-                <div className="img-box">
-                  <img src="/ranking/mob-rank-3.png" alt="" />
-                </div>
-                <div className="person-detail">
-                  <h3>Nombre</h3>
-                  <div className="profile-details">
-                    <div className="left">
-                      <p>Ubicación</p>
-                      <h5>Nivel</h5>
-                      <h6>XXXX puntos</h6>
-                    </div>
-                    <div className="right">
-                      <img
-                        src="/ranking/badge.png"
-                        alt=""
-                        className="badge-img"
-                      />
-                      <div className="stars">
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
+                  <div
+                    className="serial-no"
+                    style={{ backgroundColor: "#4e169f" }}
+                  >
+                    <h2>#</h2>
+                    <h2>3</h2>
+                  </div>
+                  <div className="img-box">
+                    <img src="/ranking/mob-rank-3.png" alt="" />
+                  </div>
+                  <div className="person-detail">
+                    <h3>Nombre</h3>
+                    <div className="profile-details">
+                      <div className="left">
+                        <p>Ubicación</p>
+                        <h5>Nivel</h5>
+                        <h6>XXXX puntos</h6>
+                      </div>
+                      <div className="right">
+                        <img
+                          src="/ranking/badge.png"
+                          alt=""
+                          className="badge-img"
+                        />
+                        <div className="stars">
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="mob-profile"
-                style={{ backgroundColor: "#0029c2" }}
-              >
+              </Link>
+              <Link href="/player-profile">
                 <div
-                  className="serial-no"
+                  className="mob-profile"
                   style={{ backgroundColor: "#0029c2" }}
                 >
-                  <h2>#</h2>
-                  <h2>4</h2>
-                </div>
-                <div className="img-box">
-                  <img src="/ranking/mob-rank-4.png" alt="" />
-                </div>
-                <div className="person-detail">
-                  <h3>Nombre</h3>
-                  <div className="profile-details">
-                    <div className="left">
-                      <p>Ubicación</p>
-                      <h5>Nivel</h5>
-                      <h6>XXXX puntos</h6>
-                    </div>
-                    <div className="right">
-                      <img
-                        src="/ranking/badge.png"
-                        alt=""
-                        className="badge-img"
-                      />
-                      <div className="stars">
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
-                        <img src="/ranking/star.png" alt="" className="star" />
+                  <div
+                    className="serial-no"
+                    style={{ backgroundColor: "#0029c2" }}
+                  >
+                    <h2>#</h2>
+                    <h2>4</h2>
+                  </div>
+                  <div className="img-box">
+                    <img src="/ranking/mob-rank-4.png" alt="" />
+                  </div>
+                  <div className="person-detail">
+                    <h3>Nombre</h3>
+                    <div className="profile-details">
+                      <div className="left">
+                        <p>Ubicación</p>
+                        <h5>Nivel</h5>
+                        <h6>XXXX puntos</h6>
+                      </div>
+                      <div className="right">
+                        <img
+                          src="/ranking/badge.png"
+                          alt=""
+                          className="badge-img"
+                        />
+                        <div className="stars">
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                          <img
+                            src="/ranking/star.png"
+                            alt=""
+                            className="star"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Carousel>
-            <Link href="" className="btn-outline-normal">
+            <Link href="/ranking" className="btn-outline-normal">
               Visita el ranking
             </Link>
           </div>
@@ -199,165 +294,173 @@ const WorldTopRanking = () => {
               <div className="ranking-details">
                 <Row gutter={[40, 16]}>
                   <Col span={8}>
-                    <div className="profile">
-                      <div className="serial-no">
-                        <h2>#</h2>
-                        <h2>1</h2>
-                      </div>
-                      <div className="img-box">
-                        <img src="/ranking/ranking1.png" alt="" />
-                      </div>
-                      <div className="person-detail">
-                        <h3>
-                          Juan perez <br />
-                          Ozuna
-                        </h3>
-                        <p>Cholula</p>
-                        <h5>Leyenda</h5>
-                        <h6>3500 puntos</h6>
-                        <img
-                          src="/ranking/badge.png"
-                          alt=""
-                          className="badge-img"
-                        />
-                        <div className="stars">
+                    <Link href="/player-profile">
+                      <div className="profile">
+                        <div className="serial-no">
+                          <h2>#</h2>
+                          <h2>1</h2>
+                        </div>
+                        <div className="img-box">
+                          <img src="/ranking/ranking1.png" alt="" />
+                        </div>
+                        <div className="person-detail">
+                          <h3>
+                            Juan perez <br />
+                            Ozuna
+                          </h3>
+                          <p>Cholula</p>
+                          <h5>Leyenda</h5>
+                          <h6>3500 puntos</h6>
                           <img
-                            src="/ranking/star.png"
+                            src="/ranking/badge.png"
                             alt=""
-                            className="star"
+                            className="badge-img"
                           />
-                          <img
-                            src="/ranking/star.png"
-                            alt=""
-                            className="star"
-                          />
-                          <img
-                            src="/ranking/star.png"
-                            alt=""
-                            className="star"
-                          />
-                          <img
-                            src="/ranking/star.png"
-                            alt=""
-                            className="star"
-                          />
-                          <img
-                            src="/ranking/star.png"
-                            alt=""
-                            className="star"
-                          />
+                          <div className="stars">
+                            <img
+                              src="/ranking/star.png"
+                              alt=""
+                              className="star"
+                            />
+                            <img
+                              src="/ranking/star.png"
+                              alt=""
+                              className="star"
+                            />
+                            <img
+                              src="/ranking/star.png"
+                              alt=""
+                              className="star"
+                            />
+                            <img
+                              src="/ranking/star.png"
+                              alt=""
+                              className="star"
+                            />
+                            <img
+                              src="/ranking/star.png"
+                              alt=""
+                              className="star"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </Col>
                   <Col span={16} className="rankings-card">
-                    <div
-                      className="player-card"
-                      style={{ backgroundColor: "#df54ff" }}
-                    >
-                      <div className="player-name">
-                        <h3>aRANZA pEREZ sOSA</h3>
-                      </div>
-                      <div className="serial-no">
-                        <h2>#</h2>
-                        <h2>2</h2>
-                      </div>
-                      <div className="user-profile">
-                        <img src="/ranking/ranking2.png" alt="" />
-                      </div>
-                      <div className="player-info">
-                        <h3> CDMX </h3>
-                        <h3> Pro Player </h3>
-                        <h3> 3488 puntos </h3>
-                      </div>
-                      <div className="ratings">
-                        <img
-                          src="/ranking/badge.png"
-                          alt=""
-                          className="badge-img"
-                        />
-                        <div className="stars">
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
+                    <Link href="/player-profile">
+                      <div
+                        className="player-card"
+                        style={{ backgroundColor: "#df54ff" }}
+                      >
+                        <div className="player-name">
+                          <h3>aRANZA pEREZ sOSA</h3>
+                        </div>
+                        <div className="serial-no">
+                          <h2>#</h2>
+                          <h2>2</h2>
+                        </div>
+                        <div className="user-profile">
+                          <img src="/ranking/ranking2.png" alt="" />
+                        </div>
+                        <div className="player-info">
+                          <h3> CDMX </h3>
+                          <h3> Pro Player </h3>
+                          <h3> 3488 puntos </h3>
+                        </div>
+                        <div className="ratings">
+                          <img
+                            src="/ranking/badge.png"
+                            alt=""
+                            className="badge-img"
+                          />
+                          <div className="stars">
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className="player-card mid"
-                      style={{ backgroundColor: "#4e169f" }}
-                    >
-                      <div className="player-name">
-                        <h3>Nombre</h3>
-                      </div>
-                      <div className="serial-no">
-                        <h2>#</h2>
-                        <h2>3</h2>
-                      </div>
-                      <div className="user-profile">
-                        <img src="/ranking/ranking3.png" alt="" />
-                      </div>
-                      <div className="player-info">
-                        <h3> Ubicación </h3>
-                        <h3> Nivel </h3>
-                        <h3> XXXX puntos </h3>
-                      </div>
-                      <div className="ratings">
-                        <img
-                          src="/ranking/badge.png"
-                          alt=""
-                          className="badge-img"
-                        />
-                        <div className="stars">
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
+                    </Link>
+                    <Link href="/player-profile">
+                      <div
+                        className="player-card mid"
+                        style={{ backgroundColor: "#4e169f" }}
+                      >
+                        <div className="player-name">
+                          <h3>Nombre</h3>
+                        </div>
+                        <div className="serial-no">
+                          <h2>#</h2>
+                          <h2>3</h2>
+                        </div>
+                        <div className="user-profile">
+                          <img src="/ranking/ranking3.png" alt="" />
+                        </div>
+                        <div className="player-info">
+                          <h3> Ubicación </h3>
+                          <h3> Nivel </h3>
+                          <h3> XXXX puntos </h3>
+                        </div>
+                        <div className="ratings">
+                          <img
+                            src="/ranking/badge.png"
+                            alt=""
+                            className="badge-img"
+                          />
+                          <div className="stars">
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className="player-card"
-                      style={{ backgroundColor: "#0029c2" }}
-                    >
-                      <div className="player-name">
-                        <h3>nombre</h3>
-                      </div>
-                      <div className="serial-no">
-                        <h2>#</h2>
-                        <h2>4</h2>
-                      </div>
-                      <div className="user-profile">
-                        <img src="/ranking/ranking2.png" alt="" />
-                      </div>
-                      <div className="player-info">
-                        <h3> Ubicación </h3>
-                        <h3> Nivel </h3>
-                        <h3> XXXX puntos </h3>
-                      </div>
-                      <div className="ratings">
-                        <img
-                          src="/ranking/badge.png"
-                          alt=""
-                          className="badge-img"
-                        />
-                        <div className="stars">
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
-                          <img src="/ranking/star.png" alt="" />
+                    </Link>
+                    <Link href="/player-profile">
+                      <div
+                        className="player-card"
+                        style={{ backgroundColor: "#0029c2" }}
+                      >
+                        <div className="player-name">
+                          <h3>nombre</h3>
+                        </div>
+                        <div className="serial-no">
+                          <h2>#</h2>
+                          <h2>4</h2>
+                        </div>
+                        <div className="user-profile">
+                          <img src="/ranking/ranking2.png" alt="" />
+                        </div>
+                        <div className="player-info">
+                          <h3> Ubicación </h3>
+                          <h3> Nivel </h3>
+                          <h3> XXXX puntos </h3>
+                        </div>
+                        <div className="ratings">
+                          <img
+                            src="/ranking/badge.png"
+                            alt=""
+                            className="badge-img"
+                          />
+                          <div className="stars">
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                            <img src="/ranking/star.png" alt="" />
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </Col>
                 </Row>
                 <img src="/ranking/bottom.png" alt="" className="bottom-img" />
               </div>
-              <Link href="" className="btn-outline-normal">
+              <Link href="/ranking" className="btn-outline-normal">
                 Visita el ranking
               </Link>
             </div>

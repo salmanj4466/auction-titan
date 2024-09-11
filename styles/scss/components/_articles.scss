@@ -114,26 +114,26 @@
     // }
   }
 
-  .ant-space{
+  .ant-space {
     position: relative !important;
     z-index: 100 !important;
     width: 100% !important;
     @media screen and (max-width: 576px) {
-      .ant-row{
+      .ant-row {
         margin: 0 !important;
       }
     }
-    h3{
+    h3 {
       margin: 0;
       color: $white;
       font-size: 18px;
     }
-    .ant-collapse-expand-icon{
+    .ant-collapse-expand-icon {
       color: $white !important;
     }
-    .ant-col{
+    .ant-col {
       padding: 0 !important;
-      &:nth-child(2){
+      &:nth-child(2) {
         margin: 20px 0 !important;
       }
       .ant-collapse-content {
@@ -141,4 +141,11 @@
       }
     }
   }
+}
+
+.ant-collapse-header {
+  background-color: #2a2634;
+  border-radius: 8px !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
 }

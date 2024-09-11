@@ -163,12 +163,16 @@ const Footer = () => {
 
               <Row gutter={20} className="align-items-end mt-5 px-5">
                 <Col span={isTabletOrMobile ? 12 : 9}>
-                  <Image width={79} height={79} src="/logo.svg" alt="logo" />
+                  <Link href="/">
+                    <Image width={79} height={79} src="/logo.svg" alt="logo" />
+                  </Link>
                 </Col>
                 <Col span={isTabletOrMobile ? 12 : 7}>
                   <p>
-                    <i className="bi bi-geo-alt"></i> Dirección: Lorem ipsum
-                    dolor sit amet.{" "}
+                    <Link href="https://g.co/kgs/nzqook5">
+                      <i className="bi bi-geo-alt"></i> Dirección: Lorem ipsum
+                      dolor sit amet.
+                    </Link>
                   </p>
                 </Col>
                 <Col span={isTabletOrMobile ? 24 : 8}>

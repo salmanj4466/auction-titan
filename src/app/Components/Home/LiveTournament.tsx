@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { Col, Row } from "antd";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 
 const LiveTournament = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <>
       <div className="liveTournament">
@@ -24,41 +24,60 @@ const LiveTournament = () => {
               </div>
             </Col>
             <Col span={isTabletOrMobile ? 24 : 12}>
-              <img
-                src="/live-tournments/Video en vivo.png"
-                alt=""
-                className="w-100"
-              />
+              <a href="/live-stream">
+                <img
+                  src="/live-tournments/Video en vivo.png"
+                  alt=""
+                  className="w-100"
+                />
+              </a>
             </Col>
             <Col span={isTabletOrMobile ? 24 : 12}>
               <div className="button-banner">
-                <h3>eventos pasados</h3>
+                <a href="/past-events">
+                  <h3>eventos pasados</h3>
+                </a>
               </div>
             </Col>
             <Col span={isTabletOrMobile ? 24 : 12}>
               <div className="button-banner">
-                <h3>Todos los torneos</h3>
+                <a href="/all-tournaments">
+                  <h3>Todos los torneos</h3>
+                </a>
               </div>
             </Col>
           </Row>
           <Row gutter={[24, 8]} className="bottom-imgs mt-2">
             <Col span={6}>
-              <img src="/live-tournments/eventos 1.png" alt="" />
+              <a href="/past-events">
+                {" "}
+                <img src="/live-tournments/eventos 1.png" alt="" />
+              </a>
             </Col>
             <Col span={6}>
-              <img src="/live-tournments/eventos 2.png" alt="" />
+              <a href="/past-events">
+                <img src="/live-tournments/eventos 2.png" alt="" />
+              </a>
             </Col>
             <Col span={12}>
-              <img src="/live-tournments/galeria 1.png" alt="" />
+              <a href="/all-tournaments">
+                <img src="/live-tournments/galeria 1.png" alt="" />
+              </a>
             </Col>
             <Col span={6}>
-              <img src="/live-tournments/eventos 3.png" alt="" />
+              <a href="/past-events">
+                <img src="/live-tournments/eventos 3.png" alt="" />
+              </a>
             </Col>
             <Col span={6}>
-              <img src="/live-tournments/eventos 4.png" alt="" />
+              <a href="/past-events">
+                <img src="/live-tournments/eventos 4.png" alt="" />
+              </a>
             </Col>
             <Col span={12}>
-              <img src="/live-tournments/galeria 2.png" alt="" />
+              <a href="/all-tournaments">
+                <img src="/live-tournments/galeria 2.png" alt="" />
+              </a>
             </Col>
           </Row>
         </div>

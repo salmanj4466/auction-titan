@@ -44,7 +44,7 @@ const Header = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/events">
                       Próximo evento
                     </a>
                   </li>
@@ -54,7 +54,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/all-tournaments">
                       Todos los torneos
                     </a>
                   </li>
@@ -112,7 +112,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/player-profile">
+                    <a className="dropdown-item" href="/register">
                       Nuevo usuario
                     </a>
                   </li>
@@ -127,7 +127,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/terms-and-conditions">
+                    <a className="dropdown-item" href="/terms-and-condition">
                       Términos y Condiciones
                     </a>
                   </li>
