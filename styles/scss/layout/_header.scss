@@ -1,11 +1,10 @@
 header {
 }
 .navbar {
-  background-image: url("/articles/nav.png");
+  background-image: url("/articles/bg.png");
   transition: all 0.2s;
   width: 100%;
   background-size: cover;
-
   &.scrolled {
     background: $white;
 
@@ -74,19 +73,31 @@ header {
     @media screen and (max-width: 992px) {
       position: absolute;
       background-color: #2a2634;
-      height: 90vh;
+      border-bottom-right-radius: 10px;
+      height: 60vh;
       top: 104px;
+      box-shadow: 0px 4px 4px 0px #00000040;
       left: 0;
-      width: 300px;
+      width: 350px;
       .nav-item {
-        padding: 10px 0;
+        padding: 6px 0;
         margin-right: auto;
         margin-left: 20px;
+        a{
+          color: $white !important;
+          font-family: $font-staat !important;
+          letter-spacing: 2.5px;
+          font-size: 18px;
+        }
       }
     }
 
     li {
       padding: 0 15px;
+
+      @include devices(xl) {
+        padding: 0 10px;
+      }
 
       @include devices(md) {
         padding: 0 6px;
@@ -107,6 +118,9 @@ header {
           color: $secondary;
         }
 
+        @include devices(xl) {
+          font-size: 16px;
+        }
         @include devices(sm) {
           font-size: 16px;
         }
@@ -123,6 +137,14 @@ header {
         font-size: 16px;
         font-weight: 500;
         color: $black;
+        @include devices(xl) {
+          padding: 8px 9px;
+          font-size: 13px;
+        }
+        @include devices(sm) {
+          padding: 8px 30px;
+          font-size: 16px;
+        }
       }
       .hero-btn2 {
         background-color: transparent;
@@ -132,10 +154,19 @@ header {
         font-size: 16px;
         font-weight: 500;
         color: $primary;
+        @include devices(xl) {
+          font-size: 12px;
+        }
+        @include devices(sm) {
+          font-size: 16px;
+        }
       }
       .bars {
         width: 80px !important;
         cursor: pointer;
+        @include devices(xl) {
+          width: 60px !important;
+        }
       }
     }
 
