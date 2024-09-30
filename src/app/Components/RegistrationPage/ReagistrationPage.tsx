@@ -34,13 +34,13 @@ const ReagistrationPage = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Nombre completo"
+              placeholder="Fecha de nacimiento"
             />
-            <input type="email" className="form-control" placeholder="E-mail" />
+            <input type="email" className="form-control" placeholder="Ciudad" />
             <input
               type="text"
               className="form-control"
-              placeholder="Contraseña"
+              placeholder="Número de teléfono"
             />
             <div className="upload">
               <p>Sube tu foto de perfil</p>

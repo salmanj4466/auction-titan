@@ -46,7 +46,7 @@
       }
       a {
         background-color: $primary;
-        color: $black;
+        color: $black !important;
         padding: 10px 30px;
         font-weight: 500;
         font-size: 16px;
@@ -242,7 +242,7 @@ button {
       a {
         font-size: 16px;
         font-weight: 700;
-        color: #938f99;
+        color: #938f99 !important;
         position: relative;
         &::after {
           content: "";
@@ -300,7 +300,7 @@ button {
       a {
         font-size: 16px;
         font-weight: 700;
-        color: #938f99;
+        color: #938f99 !important;
         position: relative;
         @media screen and (max-width: 375px) {
           font-size: 13px;
