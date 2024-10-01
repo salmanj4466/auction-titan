@@ -171,6 +171,8 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Link from "next/link";
+import { FaChevronDown } from "react-icons/fa";
+
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' });
@@ -326,7 +328,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Events
+                    Events <FaChevronDown />
                   </a>
                   <ul className="dropdown-menu">
                     <li>
@@ -351,7 +353,6 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </li>
-
                 <li className="nav-item">
                   <a className="nav-link" aria-disabled="true" href="/sponsor-page">
                     Patrocinadores
@@ -370,7 +371,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Reglas de la liga
+                    Reglas de la liga <FaChevronDown/>
                   </a>
                   <ul className="dropdown-menu">
                     <li>
@@ -393,6 +394,19 @@ const Navbar = () => {
                         Lista de puntos
                       </a>
                     </li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown d-none d-lg-block">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                      <img src="bars.png" alt="" className="bars" />
+                  </a>
+                  <ul className="dropdown-menu">
                     <li>
                       <a className="dropdown-item" href="/register">
                         Nuevo usuario
@@ -424,9 +438,6 @@ const Navbar = () => {
                       </a>
                     </li>
                   </ul>
-                </li>
-                <li className="nav-item d-none d-lg-block">
-                  <img src="bars.png" alt="" className="bars" />
                 </li>
               </ul>
             </div>

@@ -1,10 +1,10 @@
-header {
-}
+
 .navbar {
   background-image: url("/articles/bg.png");
   transition: all 0.2s;
   width: 100%;
   background-size: cover;
+
   &.scrolled {
     background: $white;
 
@@ -175,7 +175,7 @@ header {
       border-top-left-radius: 0 !important;
       border-top-right-radius: 0 !important;
       padding: 3px 0 !important;
-      margin-top: 32px !important;
+      margin-top: 24px !important;
       border: none !important;
       .dropdown-item {
         color: $white !important;
@@ -191,6 +191,11 @@ header {
       }
     }
 
+
+    .dropdown-toggle::after{
+      display: none !important;
+    }
+   
     .resister-btn {
       .dropdown-menu {
         background-color: #2a2634;
@@ -214,4 +219,7 @@ header {
       }
     }
   }
+}
+.navbar .navbar-nav li a.show{
+  padding: 16px 15px !important;
 }
