@@ -216,7 +216,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Events
+                    Eventos
                   </a>
                   <ul className="dropdown-menu">
                     <li>
@@ -328,7 +328,7 @@ const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Events <FaChevronDown />
+                    Eventos <FaChevronDown />
                   </a>
                   <ul className="dropdown-menu">
                     <li>

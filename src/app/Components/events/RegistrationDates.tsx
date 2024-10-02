@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const RegistrationDates = () => {
@@ -19,8 +20,12 @@ const RegistrationDates = () => {
             </h1>
           </div>
           <div className="btns">
-            <button className="left-btn">Cartas Banneadas</button>
-            <button className="right-btn">INSCRIBETE</button>
+            <Link href='/banned-cards'>
+              <button className="left-btn">Cartas Banneadas</button>
+            </Link>
+            <Link href='/registration-page'>
+              <button className="right-btn">INSCRIBETE</button>
+            </Link>
           </div>
         </div>
       </div>

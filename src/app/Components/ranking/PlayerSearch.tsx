@@ -13,7 +13,7 @@ const PlayerSearch = () => {
           <div className="search-users">
             <div className="search">
               <FaMagnifyingGlass className="magnifier" />
-              <Input placeholder="Juan" />
+              <Input placeholder="Búsqueda" />
             </div>
             <div className="related-suggested">
               <p className="player-heading-related">Búsquedas recientes</p>

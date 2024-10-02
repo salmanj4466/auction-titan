@@ -10,7 +10,7 @@ const LiveTournament = () => {
       <div className="liveTournament">
         <div className="container">
           <h2 className="text-center m-auto">
-            EV VIVO <span></span>
+            EN VIVO <span></span>
           </h2>
           <Row gutter={[24, 16]} className="mt-4">
             <Col span={isTabletOrMobile ? 24 : 12}>
